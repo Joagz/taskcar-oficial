@@ -9,14 +9,14 @@
 #define MOTOR_LEFT_CHANNEL LEDC_CHANNEL_0
 #define MOTOR_RIGHT_CHANNEL LEDC_CHANNEL_1
 
-#define MOTOR_LEFT_GPIO 32
-#define MOTOR_RIGHT_GPIO 25
+#define MOTOR_LEFT_GPIO 14
+#define MOTOR_RIGHT_GPIO 27
 
-#define MOTOR_LEFT_IN1 34
-#define MOTOR_LEFT_IN2 35
+#define MOTOR_LEFT_IN1 26
+#define MOTOR_LEFT_IN2 26
 
-#define MOTOR_RIGHT_IN1 26
-#define MOTOR_RIGHT_IN2 27
+#define MOTOR_RIGHT_IN1 23
+#define MOTOR_RIGHT_IN2 32
 
 void configure_gpio()
 {
@@ -39,7 +39,7 @@ esp_err_t configure_ledc_channels()
 {
     ledc_channel_config_t config_left = {
         .gpio_num = MOTOR_LEFT_GPIO,
-        .speed_mode = LEDC_SPEED_MODE_MAX,
+        .speed_mode = LEDC_HIGH_SPEED_MODE,
         .channel = LEDC_CHANNEL_0,
         .intr_type = LEDC_INTR_FADE_END,
         .timer_sel = LEDC_TIMER_0,
@@ -48,7 +48,7 @@ esp_err_t configure_ledc_channels()
 
     ledc_channel_config_t config_right = {
         .gpio_num = MOTOR_RIGHT_GPIO,
-        .speed_mode = LEDC_SPEED_MODE_MAX,
+        .speed_mode = LEDC_HIGH_SPEED_MODE,
         .channel = LEDC_CHANNEL_1,
         .intr_type = LEDC_INTR_FADE_END,
         .timer_sel = LEDC_TIMER_0,
@@ -75,7 +75,7 @@ esp_err_t configure_ledc_channels()
 esp_err_t configure_ledc_timer()
 {
     ledc_timer_config_t config = {
-        .speed_mode = LEDC_SPEED_MODE_MAX,
+        .speed_mode = LEDC_HIGH_SPEED_MODE,
         .duty_resolution = LEDC_TIMER_10_BIT,
         .timer_num = LEDC_TIMER_0,
         .freq_hz = 20 * 1000 // 20khz por ejemplo, TODO: cambiar
@@ -119,8 +119,8 @@ void writem(uint32_t duty, bool is_clockwise, int motor_in1, int motor_in2, int 
         gpio_set_level(motor_in2, 1);
     }
 
-    ledc_set_duty(LEDC_SPEED_MODE_MAX, motor_channel, duty);
-    ledc_update_duty(LEDC_SPEED_MODE_MAX, motor_channel);
+    ledc_set_duty(LEDC_HIGH_SPEED_MODE, motor_channel, duty);
+    ledc_update_duty(LEDC_HIGH_SPEED_MODE, motor_channel);
 }
 
 void motor_write(uint8_t motor_n, uint32_t duty, bool is_clockwise)
