@@ -2,6 +2,12 @@
     "files.associations": {
         "sdkconfig.h": "c",
         "freertos.h": "c",
-        "task.h": "c"
+        "task.h": "c",
+        "ledc.h": "c",
+        "esp_system.h": "c",
+        "driver.h": "c",
+        "esp_log.h": "c",
+        "motor_driver.h": "c",
+        "stdbool.h": "c"
     }
 }

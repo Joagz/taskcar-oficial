@@ -11,7 +11,7 @@
 /home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/flash.dir
 /home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/encrypted-flash.dir
 /home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/_project_elf_src.dir
-/home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/hello_world.elf.dir
+/home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/taskcar_motor_driver.elf.dir
 /home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/size.dir
 /home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/size-files.dir
 /home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/size-components.dir
@@ -635,6 +635,13 @@
 /home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/wifi_provisioning/CMakeFiles/install.dir
 /home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 /home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
+/home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/motor_driver/CMakeFiles/__idf_motor_driver.dir
+/home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/motor_driver/CMakeFiles/edit_cache.dir
+/home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/motor_driver/CMakeFiles/rebuild_cache.dir
+/home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/motor_driver/CMakeFiles/list_install_components.dir
+/home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/motor_driver/CMakeFiles/install.dir
+/home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/motor_driver/CMakeFiles/install/local.dir
+/home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/motor_driver/CMakeFiles/install/strip.dir
 /home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /home/joagz/TASKCAR/taskcar-motor-driver/build/esp-idf/main/CMakeFiles/rebuild_cache.dir
