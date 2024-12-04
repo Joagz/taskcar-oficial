@@ -14,11 +14,11 @@ void app_main(void)
 {
     esp_err_t err = configure_motor_driver();
 
-    if(err) {
+    if(err!=ESP_OK) {
         vTaskDelay(pdMS_TO_TICKS(1000));
         esp_restart();
     }
 
-    motor_write(0, 500, false);
-    while(1){}
+    motor_write(0, 255, true);
+    motor_write(1, 255, true);
 }

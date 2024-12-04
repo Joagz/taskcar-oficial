@@ -9,5 +9,6 @@
         "esp_log.h": "c",
         "motor_driver.h": "c",
         "stdbool.h": "c"
-    }
+    },
+    "idf.adapterTargetName": "esp32"
 }
