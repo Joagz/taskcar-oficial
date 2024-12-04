@@ -12,7 +12,7 @@
 #define MOTOR_LEFT_GPIO 14
 #define MOTOR_RIGHT_GPIO 27
 
-#define MOTOR_LEFT_IN1 26
+#define MOTOR_LEFT_IN1 25
 #define MOTOR_LEFT_IN2 26
 
 #define MOTOR_RIGHT_IN1 23
