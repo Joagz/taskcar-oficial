@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/bootloader
+/home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/bootloader.rule
+/home/joagz/TASKCAR/taskcar-motor-driver/build/CMakeFiles/bootloader-complete.rule
+/home/joagz/TASKCAR/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/joagz/TASKCAR/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/joagz/TASKCAR/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/joagz/TASKCAR/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/joagz/TASKCAR/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/joagz/TASKCAR/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/joagz/TASKCAR/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
