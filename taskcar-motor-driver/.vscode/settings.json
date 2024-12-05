@@ -8,7 +8,9 @@
         "driver.h": "c",
         "esp_log.h": "c",
         "motor_driver.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "gpio_num.h": "c",
+        "esp_err.h": "c"
     },
     "idf.adapterTargetName": "esp32"
 }
