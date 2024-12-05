@@ -20,11 +20,5 @@ void app_main(void)
         vTaskDelay(pdMS_TO_TICKS(1000));
         esp_restart();
     }
-
-    for (int i = 0; i <= 8192; i++)
-    {
-        motor_write(0, i, true);
-        motor_write(1, 8092 - i, true);
-        vTaskDelay(pdMS_TO_TICKS(50));
-    }
+ 
 }

@@ -34,4 +34,16 @@ menu "CONFIGURACIÓN DEL DRIVER (MOTOR)"
         default 26
         help
             PIN IN2 del motor derecho
+
+    config MOTOR_DRIVER_DUTY_RES
+        int "DUTY RESOLUTION (BITS)"
+        default 13
+        help
+            Número de ciclos de trabajo disponibles en un periodo de PWM
+
+    config MOTOR_DRIVER_PWM_FREQ
+        int "PWM FREQUENCY (Hz)"
+        default 5000 
+        help
+            Número de períodos de PWM por segundo (Hz)
 endmenu

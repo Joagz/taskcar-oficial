@@ -3,50 +3,58 @@
 #include "esp_log.h"
 #include <stdio.h>
 
-#define MOTOR_DRIVER_PWM_FREQ    10000           // 10KHz
-
 #define CONFIG_LOG_MAXIMUM_LEVEL ESP_LOG_VERBOSE
 
 #define MOTOR_LEFT_CHANNEL       LEDC_CHANNEL_0
 #define MOTOR_RIGHT_CHANNEL      LEDC_CHANNEL_1
 
-#define MOTOR_LEFT_GPIO          GPIO_NUM_5
-#define MOTOR_RIGHT_GPIO         GPIO_NUM_14
+#define MOTOR_LEFT_GPIO          CONFIG_MOTOR_LEFT_GPIO
+#define MOTOR_RIGHT_GPIO         CONFIG_MOTOR_RIGHT_GPIO
 
-#define MOTOR_LEFT_IN1           GPIO_NUM_25
-#define MOTOR_LEFT_IN2           GPIO_NUM_26
+#define MOTOR_LEFT_IN1           CONFIG_MOTOR_LEFT_IN1
+#define MOTOR_LEFT_IN2           CONFIG_MOTOR_LEFT_IN2
 
-#define MOTOR_RIGHT_IN1          GPIO_NUM_23
-#define MOTOR_RIGHT_IN2          GPIO_NUM_32
+#define MOTOR_RIGHT_IN1          CONFIG_MOTOR_RIGHT_IN1
+#define MOTOR_RIGHT_IN2          CONFIG_MOTOR_RIGHT_IN2
+
+#define MOTOR_DRIVER_DUTY_RES    CONFIG_MOTOR_DRIVER_DUTY_RES
+#define MOTOR_DRIVER_MAX_DUTY    2**MOTOR_DRIVER_DUTY_RES        
+#define MOTOR_DRIVER_PWM_FREQ    CONFIG_MOTOR_DRIVER_PWM_FREQ
 
 void configure_gpio()
 {
-    gpio_set_direction(MOTOR_LEFT_GPIO, GPIO_MODE_OUTPUT);
-    gpio_set_direction(MOTOR_RIGHT_GPIO, GPIO_MODE_OUTPUT);
-    gpio_set_direction(MOTOR_LEFT_IN1, GPIO_MODE_OUTPUT);
-    gpio_set_direction(MOTOR_LEFT_IN2, GPIO_MODE_OUTPUT);
-    gpio_set_direction(MOTOR_RIGHT_IN1, GPIO_MODE_OUTPUT);
-    gpio_set_direction(MOTOR_RIGHT_IN2, GPIO_MODE_OUTPUT);
+    ESP_ERROR_CHECK(gpio_set_direction(MOTOR_LEFT_GPIO, GPIO_MODE_OUTPUT));
+    ESP_ERROR_CHECK(gpio_set_direction(MOTOR_RIGHT_GPIO, GPIO_MODE_OUTPUT));
+    ESP_ERROR_CHECK(gpio_set_direction(MOTOR_LEFT_IN1, GPIO_MODE_OUTPUT));
+    ESP_ERROR_CHECK(gpio_set_direction(MOTOR_LEFT_IN2, GPIO_MODE_OUTPUT));
+    ESP_ERROR_CHECK(gpio_set_direction(MOTOR_RIGHT_IN1, GPIO_MODE_OUTPUT));
+    ESP_ERROR_CHECK(gpio_set_direction(MOTOR_RIGHT_IN2, GPIO_MODE_OUTPUT));
 }
+
+// TODO: make funcs for the struct ('motor_t')
+
+
+
+
 
 esp_err_t configure_ledc_channels()
 {
     ledc_channel_config_t config_left = {
-        .gpio_num = MOTOR_LEFT_GPIO,
+        .gpio_num   = MOTOR_LEFT_GPIO,
         .speed_mode = LEDC_LOW_SPEED_MODE,
-        .channel = LEDC_CHANNEL_0,
-        .intr_type = LEDC_INTR_FADE_END,
-        .timer_sel = LEDC_TIMER_0,
-        .duty = 0,
+        .channel    = LEDC_CHANNEL_0,
+        .intr_type  = LEDC_INTR_FADE_END,
+        .timer_sel  = LEDC_TIMER_0,
+        .duty       = 0,
     };
 
     ledc_channel_config_t config_right = {
-        .gpio_num = MOTOR_RIGHT_GPIO,
+        .gpio_num   = MOTOR_RIGHT_GPIO,
         .speed_mode = LEDC_LOW_SPEED_MODE,
-        .channel = LEDC_CHANNEL_1,
-        .intr_type = LEDC_INTR_FADE_END,
-        .timer_sel = LEDC_TIMER_0,
-        .duty = 0,
+        .channel    = LEDC_CHANNEL_1,
+        .intr_type  = LEDC_INTR_FADE_END,
+        .timer_sel  = LEDC_TIMER_0,
+        .duty       = 0,
     };
 
     esp_err_t err = ledc_channel_config(&config_left);
@@ -69,11 +77,11 @@ esp_err_t configure_ledc_channels()
 esp_err_t configure_ledc_timer()
 {
     ledc_timer_config_t config = {
-        .speed_mode = LEDC_LOW_SPEED_MODE,
-        .duty_resolution = LEDC_TIMER_10_BIT,
-        .timer_num = LEDC_TIMER_0,
-        .freq_hz = MOTOR_DRIVER_PWM_FREQ,
-        .clk_cfg = LEDC_AUTO_CLK};
+        .speed_mode      = LEDC_LOW_SPEED_MODE,
+        .duty_resolution = MOTOR_DRIVER_DUTY_RES,
+        .timer_num       = LEDC_TIMER_0,
+        .freq_hz         = MOTOR_DRIVER_PWM_FREQ,
+        .clk_cfg         = LEDC_AUTO_CLK};
 
     esp_err_t err = ledc_timer_config(&config);
 
@@ -90,12 +98,8 @@ esp_err_t configure_motor_driver()
 {
     configure_gpio();
 
-    esp_err_t err;
-
-    if ((err = configure_ledc_channels()) != ESP_OK)
-        return err;
-    if ((err = configure_ledc_timer()) != ESP_OK)
-        return err;
+    ESP_ERROR_CHECK(configure_ledc_channels());
+    ESP_ERROR_CHECK(configure_ledc_timer());
 
     return ESP_OK;
 }
@@ -117,18 +121,18 @@ void writem(uint32_t duty, bool is_clockwise, int motor_in1, int motor_in2, int 
     ledc_update_duty(LEDC_LOW_SPEED_MODE, motor_channel);
 }
 
-void motor_write(uint8_t motor_n, uint32_t duty, bool is_clockwise)
+void motor_write(motor_n motor_n, uint32_t duty, bool is_clockwise)
 {
 
     switch (motor_n)
     {
-    case 0:
+    case 0: 
         writem(duty, is_clockwise, MOTOR_LEFT_IN1, MOTOR_LEFT_IN2, MOTOR_LEFT_CHANNEL);
         break;
-    case 1:
+    case 1: 
         writem(duty, is_clockwise, MOTOR_RIGHT_IN1, MOTOR_RIGHT_IN2, MOTOR_RIGHT_CHANNEL);
         break;
-    default:
+    default: 
         ESP_LOGE("driver", "motor_n attribute incorrect");
     }
 }
