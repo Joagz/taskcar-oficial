@@ -1,0 +1,9 @@
+/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/main/main.c: In function 'app_main':
+/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/main/main.c:24:5: error: implicit declaration of function 'gpio_set_level' [-Werror=implicit-function-declaration]
+   24 |     gpio_set_level(25, 0);
+      |     ^~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5663: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:136: all] Error 2

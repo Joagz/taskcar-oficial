@@ -1,0 +1,13 @@
+/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/main/components/motor_driver/motor_driver.c:7: warning: "CONFIG_LOG_MAXIMUM_LEVEL" redefined
+    7 | #define CONFIG_LOG_MAXIMUM_LEVEL ESP_LOG_VERBOSE
+      | 
+In file included from /home/joagz/esp/esp-idf/components/newlib/platform_include/assert.h:12,
+                 from /home/joagz/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/reent.h:458,
+                 from /home/joagz/esp/esp-idf/components/newlib/platform_include/sys/reent.h:22,
+                 from /home/joagz/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdio.h:60,
+                 from /home/joagz/esp/esp-idf/components/esp_common/include/esp_err.h:10,
+                 from /home/joagz/esp/esp-idf/components/driver/ledc/include/driver/ledc.h:9,
+                 from /home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/main/components/motor_driver/motor_driver.c:1:
+/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/config/sdkconfig.h:487: note: this is the location of the previous definition
+  487 | #define CONFIG_LOG_MAXIMUM_LEVEL 3
+      | 

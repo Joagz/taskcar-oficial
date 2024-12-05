@@ -9,6 +9,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "motor_driver.h"
+#include "esp_log.h"
 
 void app_main(void)
 {
@@ -19,6 +20,9 @@ void app_main(void)
         esp_restart();
     }
 
-    motor_write(0, 255, true);
-    motor_write(1, 255, true);
+
+    for(int i = 0; i < 8192; i++) {
+        motor_write(0, i, true);
+        vTaskDelay(pdMS_TO_TICKS(50));
+    }
 }

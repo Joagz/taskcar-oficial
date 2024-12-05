@@ -1,0 +1,208 @@
+[  0%] Built target sections.ld.in
+[  0%] Built target partition_table_bin
+[  0%] Built target custom_bundle
+[  0%] Built target memory.ld
+[  0%] Built target _project_elf_src
+[  0%] Performing build step for 'bootloader'
+[  1%] Built target __idf_esp_https_ota
+[  3%] Built target __idf_log
+[  2%] Built target __idf_esp_http_server
+[  4%] Built target _project_elf_src
+[ 11%] Built target __idf_esp_rom
+[  2%] Built target __idf_esp_http_client
+[ 13%] Built target __idf_esp_common
+[ 23%] Built target __idf_esp_hw_support
+[  2%] Built target __idf_tcp_transport
+[ 24%] Built target __idf_esp_system
+[  3%] Built target __idf_esp_gdbstub
+[ 32%] Built target __idf_efuse
+[  4%] Built target __idf_esp_eth
+[  5%] Built target __idf_esp_adc
+[ 54%] Built target __idf_bootloader_support
+[ 55%] Built target __idf_esp_bootloader_format
+[  5%] Built target __idf_esp-tls
+[  5%] Built target __idf_http_parser
+[ 57%] Built target __idf_spi_flash
+[  6%] Built target __idf_esp_wifi
+[ 65%] Built target __idf_hal
+[  6%] Built target __idf_esp_coex
+[ 68%] Built target __idf_micro-ecc
+[ 91%] Built target __idf_soc
+[ 15%] Built target __idf_wpa_supplicant
+[ 16%] Built target __idf_esp_netif
+[ 93%] Built target __idf_xtensa
+[ 95%] Built target __idf_main
+[ 98%] Built target bootloader.elf
+[100%] Built target gen_project_binary
+[ 25%] Built target __idf_lwip
+[ 26%] Built target __idf_vfs
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[ 27%] Built target __idf_esp_phy
+[100%] Built target bootloader_check_size
+[100%] Built target app
+[ 28%] Built target __idf_nvs_flash
+[ 29%] No install step for 'bootloader'
+[ 30%] Built target __idf_esp_event
+[ 30%] Completed 'bootloader'
+[ 31%] Built target __idf_esp_timer
+[ 31%] Built target bootloader
+[ 31%] Built target __idf_esp_common
+[ 32%] Built target __idf_cxx
+[ 34%] Built target __idf_newlib
+[ 36%] Built target __idf_freertos
+[ 40%] Built target __idf_esp_hw_support
+[ 43%] Built target __idf_soc
+[ 44%] Built target __idf_heap
+[ 45%] Built target __idf_log
+[ 50%] Built target __idf_hal
+[ 50%] Built target __idf_esp_rom
+[ 54%] Built target __idf_esp_system
+[ 54%] Built target __idf_pthread
+[ 56%] Built target __idf_spi_flash
+[ 56%] Built target __idf_app_update
+[ 56%] Built target __idf_esp_partition
+[ 58%] Built target __idf_bootloader_support
+[ 59%] Built target __idf_esp_app_format
+[ 59%] Built target __idf_esp_bootloader_format
+[ 61%] Built target mbedtls
+[ 62%] Built target mbedx509
+[ 72%] Built target mbedcrypto
+[ 73%] Built target p256m
+[ 74%] Built target everest
+[ 74%] Built target __idf_mbedtls
+[ 74%] Built target __idf_esp_pm
+[ 80%] Built target __idf_driver
+[ 80%] Built target __idf_esp_mm
+[ 81%] Built target __idf_efuse
+[ 82%] Built target __idf_esp_ringbuf
+[ 83%] Built target __idf_xtensa
+[ 84%] Building C object esp-idf/motor_driver/CMakeFiles/__idf_motor_driver.dir/motor_driver.c.obj
+[ 84%] Built target __idf_unity
+[ 84%] Built target __idf_app_trace
+[ 86%] Built target __idf_console
+[ 86%] Built target __idf_esp_hid
+[ 86%] Built target __idf_protobuf-c
+[ 87%] Built target __idf_esp_lcd
+[ 87%] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/Partition.cpp.obj
+[ 87%] Linking C static library libmotor_driver.a
+[ 87%] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_common.c.obj
+[ 87%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_cmd.c.obj
+[ 87%] Built target __idf_motor_driver
+[ 87%] Building C object esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.obj
+[ 87%] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/SPI_Flash.cpp.obj
+[ 87%] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_flash.c.obj
+[ 87%] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Perf.cpp.obj
+[ 87%] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_uart.c.obj
+[ 88%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_common.c.obj
+[ 88%] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Safe.cpp.obj
+[ 88%] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_elf.c.obj
+[ 88%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_init.c.obj
+[ 89%] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_binary.c.obj
+[ 89%] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Flash.cpp.obj
+[ 89%] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_sha.c.obj
+[ 89%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_io.c.obj
+[ 89%] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_crc.c.obj
+[ 89%] Building C object esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj
+[ 89%] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/port/xtensa/core_dump_port.c.obj
+[ 89%] Linking C static library libespcoredump.a
+[ 89%] Built target __idf_espcoredump
+[ 89%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_mmc.c.obj
+[ 89%] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/mqtt_client.c.obj
+[ 90%] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/crc32.cpp.obj
+[ 90%] Linking C static library libjson.a
+[ 90%] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/wear_levelling.cpp.obj
+[ 90%] Built target __idf_json
+[ 91%] Building C object esp-idf/nvs_sec_provider/CMakeFiles/__idf_nvs_sec_provider.dir/nvs_sec_provider.c.obj
+[ 91%] Linking C static library libnvs_sec_provider.a
+[ 91%] Linking C static library libwear_levelling.a
+[ 91%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_sd.c.obj
+[ 91%] Built target __idf_nvs_sec_provider
+[ 91%] Built target __idf_wear_levelling
+[ 92%] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_msg.c.obj
+[ 92%] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_access.c.obj
+[ 92%] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_apis.c.obj
+[ 92%] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_masks.c.obj
+[ 92%] Linking C static library libsdmmc.a
+[ 92%] Linking C static library libperfmon.a
+[ 92%] Built target __idf_sdmmc
+[ 92%] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_outbox.c.obj
+[ 92%] Built target __idf_perfmon
+[ 92%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs_api.c.obj
+[ 93%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[ 93%] Linking C static library libmain.a
+[ 93%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_cache.c.obj
+[ 93%] Building C object esp-idf/cmock/CMakeFiles/__idf_cmock.dir/CMock/src/cmock.c.obj
+[ 93%] Built target __idf_main
+[ 93%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj
+[ 93%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_check.c.obj
+[ 93%] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/platform_esp32_idf.c.obj
+[ 93%] Linking C static library libcmock.a
+[ 93%] Built target __idf_cmock
+[ 93%] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio.c.obj
+[ 93%] Linking C static library libmqtt.a
+[ 93%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj
+[ 93%] Built target __idf_mqtt
+[ 93%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_gc.c.obj
+[ 93%] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_rawflash.c.obj
+[ 94%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj
+[ 94%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_hydrogen.c.obj
+[ 94%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj
+[ 94%] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_wl.c.obj
+[ 95%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_nucleus.c.obj
+[ 95%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj
+[ 95%] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ff.c.obj
+[ 95%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj
+[ 95%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj
+[ 95%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj
+[ 95%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj
+[ 95%] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ffunicode.c.obj
+[ 95%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security0.c.obj
+[ 95%] Linking C static library libspiffs.a
+[ 95%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.obj
+[ 95%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj
+[ 95%] Built target __idf_spiffs
+[ 96%] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port/freertos/ffsystem.c.obj
+[ 96%] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_sdmmc.c.obj
+[ 96%] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat.c.obj
+[ 97%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj
+[ 97%] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_sdmmc.c.obj
+[ 97%] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj
+[ 97%] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_spiflash.c.obj
+[ 97%] Linking C static library libprotocomm.a
+[ 97%] Built target __idf_protocomm
+[ 97%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_config.c.obj
+[ 97%] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl.c.obj
+[ 97%] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj
+[ 97%] Linking C static library libfatfs.a
+[ 97%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_scan.c.obj
+[ 97%] Built target __idf_fatfs
+[ 97%] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/proto-c/esp_local_ctrl.pb-c.c.obj
+[ 97%] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_httpd.c.obj
+[ 97%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_ctrl.c.obj
+[ 97%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/manager.c.obj
+[ 97%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/handlers.c.obj
+[ 97%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_console.c.obj
+[ 98%] Linking C static library libesp_local_ctrl.a
+[ 98%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_config.pb-c.c.obj
+[ 98%] Built target __idf_esp_local_ctrl
+[ 99%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_scan.pb-c.c.obj
+[ 99%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_ctrl.pb-c.c.obj
+[ 99%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_constants.pb-c.c.obj
+[ 99%] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_softap.c.obj
+[ 99%] Linking C static library libwifi_provisioning.a
+[ 99%] Built target __idf_wifi_provisioning
+[ 99%] Generating ld/sections.ld
+[ 99%] Built target __ldgen_output_sections.ld
+[ 99%] Building C object CMakeFiles/taskcar_motor_driver.elf.dir/project_elf_src_esp32.c.obj
+[100%] Linking CXX executable taskcar_motor_driver.elf
+[100%] Built target taskcar_motor_driver.elf
+[100%] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/taskcar_motor_driver.bin
+[100%] Built target gen_project_binary
+taskcar_motor_driver.bin binary size 0x2ea00 bytes. Smallest app partition is 0x100000 bytes. 0xd1600 bytes (82%) free.
+[100%] Built target app_check_size
+[100%] Built target app

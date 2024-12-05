@@ -1,0 +1,8 @@
+/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/main/main.c: In function 'app_main':
+/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/main/main.c:22:5: error: implicit declaration of function 'vTaskDelay' [-Werror=implicit-function-declaration]
+   22 |     vTaskDelay(10000);
+      |     ^~~~~~~~~~
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:79: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5663: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

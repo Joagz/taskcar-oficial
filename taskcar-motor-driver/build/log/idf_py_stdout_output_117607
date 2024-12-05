@@ -1,0 +1,145 @@
+[  0%] Built target sections.ld.in
+[  0%] Built target custom_bundle
+[  0%] Built target memory.ld
+[  0%] Built target partition_table_bin
+[  0%] Built target _project_elf_src
+[  1%] Built target __idf_esp_https_ota
+[  1%] Performing build step for 'bootloader'
+[  2%] Built target __idf_esp_http_server
+[  3%] Built target __idf_log
+[  4%] Built target _project_elf_src
+[  2%] Built target __idf_esp_http_client
+[ 11%] Built target __idf_esp_rom
+[ 13%] Built target __idf_esp_common
+[  2%] Built target __idf_tcp_transport
+[  3%] Built target __idf_esp_gdbstub
+[ 23%] Built target __idf_esp_hw_support
+[  4%] Built target __idf_esp_eth
+[ 24%] Built target __idf_esp_system
+[  5%] Built target __idf_esp_adc
+[ 32%] Built target __idf_efuse
+[  5%] Built target __idf_esp-tls
+[ 54%] Built target __idf_bootloader_support
+[ 55%] Built target __idf_esp_bootloader_format
+[  5%] Built target __idf_http_parser
+[ 57%] Built target __idf_spi_flash
+[  6%] Built target __idf_esp_wifi
+[ 65%] Built target __idf_hal
+[  6%] Built target __idf_esp_coex
+[ 68%] Built target __idf_micro-ecc
+[ 91%] Built target __idf_soc
+[ 93%] Built target __idf_xtensa
+[ 15%] Built target __idf_wpa_supplicant
+[ 95%] Built target __idf_main
+[ 16%] Built target __idf_esp_netif
+[ 98%] Built target bootloader.elf
+[100%] Built target gen_project_binary
+[ 25%] Built target __idf_lwip
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[100%] Built target bootloader_check_size
+[ 26%] Built target __idf_vfs
+[100%] Built target app
+[ 27%] Built target __idf_esp_phy
+[ 28%] No install step for 'bootloader'
+[ 29%] Built target __idf_nvs_flash
+[ 29%] Completed 'bootloader'
+[ 30%] Built target __idf_esp_event
+[ 30%] Built target bootloader
+[ 31%] Built target __idf_esp_timer
+[ 31%] Built target __idf_esp_common
+[ 32%] Built target __idf_cxx
+[ 34%] Built target __idf_newlib
+[ 36%] Built target __idf_freertos
+[ 40%] Built target __idf_esp_hw_support
+[ 43%] Built target __idf_soc
+[ 44%] Built target __idf_heap
+[ 45%] Built target __idf_log
+[ 50%] Built target __idf_hal
+[ 50%] Built target __idf_esp_rom
+[ 54%] Built target __idf_esp_system
+[ 54%] Built target __idf_pthread
+[ 56%] Built target __idf_spi_flash
+[ 56%] Built target __idf_app_update
+[ 56%] Built target __idf_esp_partition
+[ 58%] Built target __idf_bootloader_support
+[ 59%] Built target __idf_esp_app_format
+[ 59%] Built target __idf_esp_bootloader_format
+[ 61%] Built target mbedtls
+[ 62%] Built target mbedx509
+[ 72%] Built target mbedcrypto
+[ 73%] Built target p256m
+[ 74%] Built target everest
+[ 74%] Built target __idf_mbedtls
+[ 74%] Built target __idf_esp_pm
+[ 80%] Built target __idf_driver
+[ 80%] Built target __idf_esp_mm
+[ 81%] Built target __idf_efuse
+[ 82%] Built target __idf_esp_ringbuf
+[ 83%] Built target __idf_xtensa
+[ 83%] Built target __idf_app_trace
+[ 83%] Built target __idf_motor_driver
+[ 86%] Built target __idf_console
+[ 86%] Built target __idf_unity
+[ 86%] Built target __idf_esp_hid
+[ 87%] Built target __idf_esp_lcd
+[ 88%] Built target __idf_espcoredump
+[ 88%] Built target __idf_protobuf-c
+[ 89%] Built target __idf_wear_levelling
+[ 90%] Built target __idf_sdmmc
+[ 91%] Built target __idf_mqtt
+[ 91%] Built target __idf_json
+[ 92%] Built target __idf_nvs_sec_provider
+[ 92%] Built target __idf_perfmon
+[ 93%] Built target __idf_cmock
+[ 93%] Built target __idf_spiffs
+[ 94%] Built target __idf_main
+[ 96%] Built target __idf_protocomm
+[ 97%] Built target __idf_fatfs
+[ 98%] Built target __idf_esp_local_ctrl
+[ 99%] Built target __idf_wifi_provisioning
+[ 99%] Built target __ldgen_output_sections.ld
+[100%] Built target taskcar_motor_driver.elf
+[100%] Built target gen_project_binary
+taskcar_motor_driver.bin binary size 0x2d6a0 bytes. Smallest app partition is 0x100000 bytes. 0xd2960 bytes (82%) free.
+[100%] Built target app_check_size
+[100%] Built target app
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 taskcar_motor_driver.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting.......
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 160MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 80:7d:3a:83:f6:ec
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0003dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26720 bytes to 16342...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16342 compressed) at 0x00001000 in 0.8 seconds (effective 284.7 kbit/s)...
+Hash of data verified.
+Compressed 186016 bytes to 99551...
+Writing at 0x00010000... (14 %)
+Writing at 0x0001c85d... (28 %)
+Writing at 0x00022267... (42 %)
+Writing at 0x00027ead... (57 %)
+Writing at 0x0002f5de... (71 %)
+Writing at 0x0003692a... (85 %)
+Writing at 0x0003ce67... (100 %)
+Wrote 186016 bytes (99551 compressed) at 0x00010000 in 2.7 seconds (effective 558.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 438.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+[100%] Built target flash
