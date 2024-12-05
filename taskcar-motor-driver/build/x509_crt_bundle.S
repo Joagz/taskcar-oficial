@@ -1,4 +1,4 @@
-/* * Data converted from /home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

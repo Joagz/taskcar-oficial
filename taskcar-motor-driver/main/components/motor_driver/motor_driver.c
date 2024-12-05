@@ -1,22 +1,23 @@
+#include "motor_driver.h"
 #include "driver/ledc.h"
 #include "esp_log.h"
 #include <stdio.h>
 
-#include "motor_driver.h"
+#define MOTOR_DRIVER_PWM_FREQ    10000           // 10KHz
 
 #define CONFIG_LOG_MAXIMUM_LEVEL ESP_LOG_VERBOSE
 
-#define MOTOR_LEFT_CHANNEL LEDC_CHANNEL_0
-#define MOTOR_RIGHT_CHANNEL LEDC_CHANNEL_1
+#define MOTOR_LEFT_CHANNEL       LEDC_CHANNEL_0
+#define MOTOR_RIGHT_CHANNEL      LEDC_CHANNEL_1
 
-#define MOTOR_LEFT_GPIO GPIO_NUM_5
-#define MOTOR_RIGHT_GPIO 14 
+#define MOTOR_LEFT_GPIO          GPIO_NUM_5
+#define MOTOR_RIGHT_GPIO         GPIO_NUM_14
 
-#define MOTOR_LEFT_IN1 GPIO_NUM_25
-#define MOTOR_LEFT_IN2 GPIO_NUM_26
+#define MOTOR_LEFT_IN1           GPIO_NUM_25
+#define MOTOR_LEFT_IN2           GPIO_NUM_26
 
-#define MOTOR_RIGHT_IN1 23
-#define MOTOR_RIGHT_IN2 32
+#define MOTOR_RIGHT_IN1          GPIO_NUM_23
+#define MOTOR_RIGHT_IN2          GPIO_NUM_32
 
 void configure_gpio()
 {
@@ -71,9 +72,8 @@ esp_err_t configure_ledc_timer()
         .speed_mode = LEDC_LOW_SPEED_MODE,
         .duty_resolution = LEDC_TIMER_10_BIT,
         .timer_num = LEDC_TIMER_0,
-        .freq_hz = 10*1000, // 10KHz por ejemplo, TODO: cambiar
-        .clk_cfg = LEDC_AUTO_CLK
-    };
+        .freq_hz = MOTOR_DRIVER_PWM_FREQ,
+        .clk_cfg = LEDC_AUTO_CLK};
 
     esp_err_t err = ledc_timer_config(&config);
 

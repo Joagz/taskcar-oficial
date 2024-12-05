@@ -1,0 +1,37 @@
+menu "CONFIGURACIÓN DEL DRIVER (MOTOR)"
+    config MOTOR_LEFT_GPIO
+        int "PIN ENABLE MOTOR IZQUIERO"
+        default 5
+        help
+            Número de PIN para el puerto ENABLE del motor izquierdo (GPIO_PIN_5 por defecto)
+
+    config MOTOR_RIGHT_GPIO
+        int "PIN ENABLE MOTOR DERECHO"
+        default 14
+        help
+            Número de PIN para el puerto ENABLE del motor derecho (GPIO_PIN_14 por defecto)
+
+    config MOTOR_LEFT_IN1
+        int "IN1 MOTOR IZQUIERDO"
+        default 25
+        help
+            PIN IN1 del motor izquierdo (GPIO_PIN_25 por defecto)
+        
+    config MOTOR_LEFT_IN2
+        int "IN2 MOTOR IZQUIERDO"
+        default 26
+        help
+            PIN IN2 del motor izquierdo (GPIO_PIN_26 por defecto)
+
+    config MOTOR_RIGHT_IN1
+        int "IN1 MOTOR DERECHO"
+        default 23
+        help
+            PIN IN1 del motor derecho (GPIO_PIN_23 por defecto)
+        
+    config MOTOR_RIGHT_IN2
+        int "IN2 MOTOR DERECHO"
+        default 32
+        help
+            PIN IN2 del motor derecho (GPIO_PIN_32 por defecto)
+endmenu

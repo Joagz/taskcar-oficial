@@ -4721,6 +4721,74 @@
     {
         "children": [
             {
+                "children": [],
+                "depends_on": null,
+                "help": "N\u00famero de PIN para el puerto ENABLE del motor izquierdo (GPIO_PIN_5 por defecto)",
+                "id": "MOTOR_LEFT_GPIO",
+                "name": "MOTOR_LEFT_GPIO",
+                "range": null,
+                "title": "PIN ENABLE MOTOR IZQUIERO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "N\u00famero de PIN para el puerto ENABLE del motor derecho (GPIO_PIN_14 por defecto)",
+                "id": "MOTOR_RIGHT_GPIO",
+                "name": "MOTOR_RIGHT_GPIO",
+                "range": null,
+                "title": "PIN ENABLE MOTOR DERECHO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "PIN IN1 del motor izquierdo (GPIO_PIN_25 por defecto)",
+                "id": "MOTOR_LEFT_IN1",
+                "name": "MOTOR_LEFT_IN1",
+                "range": null,
+                "title": "IN1 MOTOR IZQUIERDO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "PIN IN2 del motor izquierdo (GPIO_PIN_26 por defecto)",
+                "id": "MOTOR_LEFT_IN2",
+                "name": "MOTOR_LEFT_IN2",
+                "range": null,
+                "title": "IN2 MOTOR IZQUIERDO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "PIN IN1 del motor derecho (GPIO_PIN_23 por defecto)",
+                "id": "MOTOR_RIGHT_IN1",
+                "name": "MOTOR_RIGHT_IN1",
+                "range": null,
+                "title": "IN1 MOTOR DERECHO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "PIN IN2 del motor derecho (GPIO_PIN_32 por defecto)",
+                "id": "MOTOR_RIGHT_IN2",
+                "name": "MOTOR_RIGHT_IN2",
+                "range": null,
+                "title": "IN2 MOTOR DERECHO",
+                "type": "int"
+            }
+        ],
+        "depends_on": null,
+        "id": "configuraci\u00f3n-del-driver-motor-",
+        "title": "CONFIGURACI\u00d3N DEL DRIVER (MOTOR)",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [
                     {
                         "children": [],

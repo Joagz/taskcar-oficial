@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/CMakeFiles/bootloader"
+			"file" : "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/CMakeFiles/bootloader.rule"
+			"file" : "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/home/joagz/esp/esp-idf/projects/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

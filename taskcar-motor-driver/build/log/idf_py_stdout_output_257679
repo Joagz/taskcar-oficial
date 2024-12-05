@@ -1,0 +1,32 @@
+[1/11] Building C object esp-idf/motor_driver/CMakeFiles/__idf_motor_driver.dir/motor_driver.c.obj
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/motor_driver/motor_driver.c:7: warning: "CONFIG_LOG_MAXIMUM_LEVEL" redefined
+    7 | #define CONFIG_LOG_MAXIMUM_LEVEL ESP_LOG_VERBOSE
+      | 
+In file included from /home/joagz/esp/esp-idf/components/newlib/platform_include/assert.h:12,
+                 from /home/joagz/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/reent.h:458,
+                 from /home/joagz/esp/esp-idf/components/newlib/platform_include/sys/reent.h:22,
+                 from /home/joagz/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdio.h:60,
+                 from /home/joagz/esp/esp-idf/components/esp_common/include/esp_err.h:10,
+                 from /home/joagz/esp/esp-idf/components/driver/ledc/include/driver/ledc.h:9,
+                 from /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/motor_driver/motor_driver.c:1:
+/home/joagz/taskcar-oficial/taskcar-motor-driver/build/config/sdkconfig.h:487: note: this is the location of the previous definition
+  487 | #define CONFIG_LOG_MAXIMUM_LEVEL 3
+      | 
+[2/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[3/11] Performing build step for 'bootloader'
+[1/1] cd /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/esp-idf/esptool_py && /home/joagz/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/joagz/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[4/11] No install step for 'bootloader'
+[5/11] Linking C static library esp-idf/motor_driver/libmotor_driver.a
+[6/11] Linking C static library esp-idf/main/libmain.a
+[7/11] Completed 'bootloader'
+[8/11] Generating ld/sections.ld
+[9/11] Linking CXX executable taskcar_motor_driver.elf
+[10/11] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/joagz/taskcar-oficial/taskcar-motor-driver/build/taskcar_motor_driver.bin
+[11/11] cd /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/esptool_py && /home/joagz/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/joagz/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/joagz/taskcar-oficial/taskcar-motor-driver/build/partition_table/partition-table.bin /home/joagz/taskcar-oficial/taskcar-motor-driver/build/taskcar_motor_driver.bin
+taskcar_motor_driver.bin binary size 0x2d660 bytes. Smallest app partition is 0x100000 bytes. 0xd29a0 bytes (82%) free.
