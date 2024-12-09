@@ -1,0 +1,154 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec  9 2024 18:33:22[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b578h ( 46456) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001b5a0 vaddr=3ffb0000 size=022b4h (  8884) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d85c vaddr=40080000 size=027bch ( 10172) load[0m
+[0;32mI (129) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=168cch ( 92364) map[0m
+[0;32mI (165) esp_image: segment 4: paddr=000368f4 vaddr=400827bc size=0b368h ( 45928) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (214) cpu_start: Project name:     taskcar_motor_driver[0m
+[0;32mI (220) cpu_start: App version:      942c85b-dirty[0m
+[0;32mI (226) cpu_start: Compile time:     Dec  9 2024 18:33:16[0m
+[0;32mI (232) cpu_start: ELF file SHA256:  72d02431a...[0m
+[0;32mI (237) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (252) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2BB8 len 0002D448 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008DB24 len 000124DC (73 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;33mW (303) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (317) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;31mE (338) i2c_imu: 242 228 50[0m
+[0;31mE (1338) i2c_imu: 243 227 50[0m
+[0;31mE (2338) i2c_imu: 243 228 51[0m
+[0;31mE (3338) i2c_imu: 242 227 51[0m
+[0;31mE (4338) i2c_imu: 9 199 227[0m
+[0;31mE (5338) i2c_imu: 8 200 221[0m
+[0;31mE (6338) i2c_imu: 6 198 220[0m
+[0;31mE (7338) i2c_imu: 8 199 219[0m
+[0;31mE (8338) i2c_imu: 195 247 244[0m
+[0;31mE (9338) i2c_imu: 195 9 249[0m
+[0;31mE (10338) i2c_imu: 197 13 246[0m
+[0;31mE (11338) i2c_imu: 195 10 245[0m
+[0;31mE (12338) i2c_imu: 191 255 247[0m
+[0;31mE (13338) i2c_imu: 63 1 219[0m
+[0;31mE (14338) i2c_imu: 65 254 240[0m
+[0;31mE (15338) i2c_imu: 65 254 240[0m
+[0;31mE (16338) i2c_imu: 65 0 239[0m
+[0;31mE (17338) i2c_imu: 65 2 241[0m
+[0;31mE (18338) i2c_imu: 64 3 239[0m
+[0;31mE (19338) i2c_imu: 66 5 239[0m
+[0;31mE (20338) i2c_imu: 252 250 55[0m
+[0;31mE (21338) i2c_imu: 250 253 57[0m
+[0;31mE (22338) i2c_imu: 250 255 59[0m
+[0;31mE (23338) i2c_imu: 21 35 42[0m
+[0;31mE (24338) i2c_imu: 3 199 235[0m
+[0;31mE (25338) i2c_imu: 10 227 26[0m
+[0;31mE (26338) i2c_imu: 239 197 15[0m
+[0;31mE (27338) i2c_imu: 241 196 15[0m
+[0;31mE (28338) i2c_imu: 241 196 16[0m
+[0;31mE (29338) i2c_imu: 242 197 17[0m
+[0;31mE (30338) i2c_imu: 242 197 17[0m
+[0;31mE (31338) i2c_imu: 243 197 17[0m
+[0;31mE (32338) i2c_imu: 243 197 18[0m
+[0;31mE (33338) i2c_imu: 243 197 18[0m
+[0;31mE (34338) i2c_imu: 243 198 18[0m
+[0;31mE (35338) i2c_imu: 243 197 19[0m
+[0;31mE (36338) i2c_imu: 244 198 19[0m
+[0;31mE (37338) i2c_imu: 244 197 20[0m
+[0;31mE (38338) i2c_imu: 244 198 20[0m
+[0;31mE (39338) i2c_imu: 244 198 20[0m
+[0;31mE (40338) i2c_imu: 244 198 21[0m
+[0;31mE (41338) i2c_imu: 245 198 20[0m
+[0;31mE (42338) i2c_imu: 245 198 21[0m
+[0;31mE (43338) i2c_imu: 244 198 21[0m
+[0;31mE (44338) i2c_imu: 245 198 21[0m
+[0;31mE (45338) i2c_imu: 244 198 21[0m
+[0;31mE (46338) i2c_imu: 245 198 21[0m
+[0;31mE (47338) i2c_imu: 245 198 21[0m
+[0;31mE (48338) i2c_imu: 245 198 21[0m
+[0;31mE (49338) i2c_imu: 245 198 22[0m
+[0;31mE (50338) i2c_imu: 244 199 21[0m
+[0;31mE (51338) i2c_imu: 245 198 21[0m
+[0;31mE (52338) i2c_imu: 245 198 22[0m
+[0;31mE (53338) i2c_imu: 245 198 22[0m
+[0;31mE (54338) i2c_imu: 245 198 22[0m
+[0;31mE (55338) i2c_imu: 245 198 22[0m
+[0;31mE (56338) i2c_imu: 244 198 22[0m
+[0;31mE (57338) i2c_imu: 245 198 22[0m
+[0;31mE (58338) i2c_imu: 245 198 22[0m
+[0;31mE (59338) i2c_imu: 245 199 22[0m
+[0;31mE (60338) i2c_imu: 245 199 22[0m
+[0;31mE (61338) i2c_imu: 245 198 22[0m
+[0;31mE (62338) i2c_imu: 245 198 22[0m
+[0;31mE (63338) i2c_imu: 245 198 22[0m
+[0;31mE (64338) i2c_imu: 245 198 22[0m
+[0;31mE (65338) i2c_imu: 245 198 22[0m
+[0;31mE (66338) i2c_imu: 245 198 22[0m
+[0;31mE (67338) i2c_imu: 245 198 22[0m
+[0;31mE (68338) i2c_imu: 245 198 21[0m
+[0;31mE (69338) i2c_imu: 245 198 22[0m
+[0;31mE (70338) i2c_imu: 245 199 22[0m
+[0;31mE (71338) i2c_imu: 245 198 22[0m
+[0;31mE (72338) i2c_imu: 245 198 22[0m
+[0;31mE (73338) i2c_imu: 245 198 22[0m
+[0;31mE (74338) i2c_imu: 245 199 22[0m
+[0;31mE (75338) i2c_imu: 245 198 22[0m
+[0;31mE (76338) i2c_imu: 245 198 22[0m
+[0;31mE (77338) i2c_imu: 245 198 23[0m
+[0;31mE (78338) i2c_imu: 245 198 23[0m
+[0;31mE (79338) i2c_imu: 245 199 23[0m
+[0;31mE (80338) i2c_imu: 245 198 23[0m
+[0;31mE (81338) i2c_imu: 245 198 23[0m
+[0;31mE (82338) i2c_imu: 245 199 23[0m
+[0;31mE (83338) i2c_imu: 245 198 23[0m
+[0;31mE (84338) i2c_imu: 245 198 23[0m
+[0;31mE (85338) i2c_imu: 245 200 22[0m
+[0;31mE (86338) i2c_imu: 245 198 22[0m
+[0;31mE (87338) i2c_imu: 245 198 23[0m
+[0;31mE (88338) i2c_imu: 245 198 23[0m
+[0;31mE (89338) i2c_imu: 245 199 22[0m
+[0;31mE (90338) i2c_imu: 245 199 23[0m
+[0;31mE (91338) i2c_imu: 245 199 23[0m
+[0;31mE (92338) i2c_imu: 245 198 23[0m
+[0;31mE (93338) i2c_imu: 246 198 24[0m
+[0;31mE (94338) i2c_imu: 245 199 24[0m
+[0;31mE (95338) i2c_imu: 246 199 24[0m
+[0;31mE (96338) i2c_imu: 246 200 24[0m

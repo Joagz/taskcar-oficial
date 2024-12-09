@@ -6,7 +6,8 @@
             "cppStandard": "c++17",
             "includePath": [
                 "${config:idf.espIdfPath}/components/**",
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/home/joagz/esp/esp-idf/components/driver/ledc/include"
             ],
             "browse": {
                 "path": [
@@ -14,7 +15,8 @@
                 ],
                 "limitSymbolsToIncludedHeaders": false
             },
-            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "compilerPath": "${config:idf.toolsPath}/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc"
         }
     ],
     "version": 4

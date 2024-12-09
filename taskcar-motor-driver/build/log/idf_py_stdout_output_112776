@@ -1,0 +1,317 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec  9 2024 18:33:22[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v1.0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b7f8h ( 47096) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b820 vaddr=3ffb0000 size=022b4h (  8884) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001dadc vaddr=40080000 size=0253ch (  9532) load[0m
+[0;32mI (129) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=19d9ch (105884) map[0m
+[0;32mI (170) esp_image: segment 4: paddr=00039dc4 vaddr=4008253c size=0b5e8h ( 46568) load[0m
+[0;32mI (195) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (207) cpu_start: Multicore app[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (216) cpu_start: Application information:[0m
+[0;32mI (219) cpu_start: Project name:     taskcar_motor_driver[0m
+[0;32mI (225) cpu_start: App version:      942c85b-dirty[0m
+[0;32mI (231) cpu_start: Compile time:     Dec  9 2024 18:33:16[0m
+[0;32mI (237) cpu_start: ELF file SHA256:  0610ead5f...[0m
+[0;32mI (242) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (247) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (252) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (257) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (262) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (269) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFB2BB8 len 0002D448 (181 KiB): DRAM[0m
+[0;32mI (281) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (294) heap_init: At 4008DB24 len 000124DC (73 KiB): IRAM[0m
+[0;32mI (301) spi_flash: detected chip: generic[0m
+[0;32mI (305) spi_flash: flash io: dio[0m
+[0;33mW (309) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (322) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (333) main_task: Started on CPU0[0m
+[0;32mI (343) main_task: Calling app_main()[0m
+[0;32mI (343) i2c_imu: fe 7c d7 e0 2e 10 [0m
+[0;32mI (1343) i2c_imu: fe ac d7 60 2c b4 [0m
+[0;32mI (2343) i2c_imu: fe 60 d8 90 2e 38 [0m
+[0;32mI (3343) i2c_imu: fe 50 d8 28 2d 28 [0m
+[0;32mI (4343) i2c_imu: fe 88 d7 ec 2d a8 [0m
+[0;32mI (5343) i2c_imu: 20 b8 c8 34 e6 e4 [0m
+[0;32mI (6343) i2c_imu: 16 08 c6 40 dd d4 [0m
+[0;32mI (7343) i2c_imu: 00 94 3c 28 17 f0 [0m
+[0;32mI (8343) i2c_imu: 12 84 e7 18 60 78 [0m
+[0;32mI (9343) i2c_imu: ef 84 d3 48 26 5c [0m
+[0;32mI (10343) i2c_imu: f1 64 d2 10 24 a4 [0m
+[0;32mI (11343) i2c_imu: f2 30 d2 90 26 2c [0m
+[0;32mI (12343) i2c_imu: f2 38 d2 c0 26 5c [0m
+[0;32mI (13343) i2c_imu: f2 68 d3 00 26 38 [0m
+[0;32mI (14343) i2c_imu: f2 e8 d3 50 26 fc [0m
+[0;32mI (15343) i2c_imu: f2 4c d4 ec 28 64 [0m
+[0;32mI (16343) i2c_imu: f1 f8 d4 f0 28 80 [0m
+[0;32mI (17343) i2c_imu: f2 88 d4 e8 28 80 [0m
+[0;32mI (18343) i2c_imu: f2 40 d4 f8 28 f0 [0m
+[0;32mI (19343) i2c_imu: f2 4c d4 d8 28 c0 [0m
+[0;32mI (20343) i2c_imu: f2 08 d5 78 28 c8 [0m
+[0;32mI (21343) i2c_imu: f2 a0 d5 84 28 a8 [0m
+[0;32mI (22343) i2c_imu: f2 b4 d5 38 28 84 [0m
+[0;32mI (23343) i2c_imu: f2 dc d5 04 29 04 [0m
+[0;32mI (24343) i2c_imu: f2 38 d5 c8 28 68 [0m
+[0;32mI (25343) i2c_imu: f2 5c d5 34 28 d4 [0m
+[0;32mI (26343) i2c_imu: f2 88 d5 8c 29 68 [0m
+[0;32mI (27343) i2c_imu: f2 44 d5 e0 28 98 [0m
+[0;32mI (28343) i2c_imu: f3 04 d5 68 28 d0 [0m
+[0;32mI (29343) i2c_imu: f2 f0 d5 dc 28 f0 [0m
+[0;32mI (30343) i2c_imu: f2 b8 d5 c4 28 60 [0m
+[0;32mI (31343) i2c_imu: f2 1c d4 18 2a 54 [0m
+[0;32mI (32343) i2c_imu: f2 9c d5 68 27 fc [0m
+[0;32mI (33343) i2c_imu: f2 a8 d5 c4 28 c8 [0m
+[0;32mI (34343) i2c_imu: f2 6c d6 54 29 44 [0m
+[0;32mI (35343) i2c_imu: f2 44 d6 34 29 b4 [0m
+[0;32mI (36343) i2c_imu: f2 6c d6 f0 29 78 [0m
+[0;32mI (37343) i2c_imu: f2 ac d6 c4 29 2c [0m
+[0;32mI (38343) i2c_imu: f2 94 d6 28 29 b8 [0m
+[0;32mI (39343) i2c_imu: f2 b8 d5 dc 29 9c [0m
+[0;32mI (40343) i2c_imu: f2 44 d6 48 29 50 [0m
+[0;32mI (41343) i2c_imu: f2 10 d6 ac 29 8c [0m
+[0;32mI (42343) i2c_imu: f1 e4 d6 20 29 6c [0m
+[0;32mI (43343) i2c_imu: f1 8c d7 34 2a 58 [0m
+[0;32mI (44343) i2c_imu: f1 dc d7 1c 2a b4 [0m
+[0;32mI (45343) i2c_imu: f1 94 d7 84 2a 2c [0m
+[0;32mI (46343) i2c_imu: f1 c8 d6 f8 2a c8 [0m
+[0;32mI (47343) i2c_imu: f1 b8 d7 5c 2a 54 [0m
+[0;32mI (48343) i2c_imu: f2 20 d7 8c 2a e8 [0m
+[0;32mI (49343) i2c_imu: f2 10 d7 c0 2a 84 [0m
+[0;32mI (50343) i2c_imu: f3 e4 d8 a8 29 58 [0m
+[0;32mI (51343) i2c_imu: f1 c8 d7 a8 2a 70 [0m
+[0;32mI (52343) i2c_imu: f1 84 d6 b0 2a 28 [0m
+[0;32mI (53343) i2c_imu: f1 9c d8 00 2a e0 [0m
+[0;32mI (54343) i2c_imu: f1 bc d7 9c 2a 58 [0m
+[0;32mI (55343) i2c_imu: f2 0c d8 24 2a d8 [0m
+[0;32mI (56343) i2c_imu: f2 b8 d8 60 2a 54 [0m
+[0;32mI (57343) i2c_imu: f2 6c d7 bc 2a d0 [0m
+[0;32mI (58343) i2c_imu: f1 84 d7 b4 2b 10 [0m
+[0;32mI (59343) i2c_imu: f1 7c d7 6c 2b 28 [0m
+[0;32mI (60343) i2c_imu: f1 7c d7 60 2a 1c [0m
+[0;32mI (61343) i2c_imu: f1 fc d7 30 2a b0 [0m
+[0;32mI (62343) i2c_imu: f1 b0 d7 f8 2a 60 [0m
+[0;32mI (63343) i2c_imu: f1 b4 d7 8c 2a 70 [0m
+[0;32mI (64343) i2c_imu: f1 c0 d7 48 2b 18 [0m
+[0;32mI (65343) i2c_imu: f1 bc d7 bc 2a 90 [0m
+[0;32mI (66343) i2c_imu: f2 18 d8 74 2a d4 [0m
+[0;32mI (67343) i2c_imu: f1 a0 d7 80 2a 98 [0m
+[0;32mI (68343) i2c_imu: f1 88 d7 34 2a fc [0m
+[0;32mI (69343) i2c_imu: f1 18 d6 34 2c 34 [0m
+[0;32mI (70343) i2c_imu: f1 cc d7 f0 2a c4 [0m
+[0;32mI (71343) i2c_imu: f1 a8 d7 f4 2b 88 [0m
+[0;32mI (72343) i2c_imu: f1 98 d7 8c 2a 6c [0m
+[0;32mI (73343) i2c_imu: f1 9c d7 88 2b 54 [0m
+[0;32mI (74343) i2c_imu: f2 44 d7 dc 2a 88 [0m
+[0;32mI (75343) i2c_imu: f0 b4 d6 c8 2b e8 [0m
+[0;32mI (76343) i2c_imu: f1 f8 d7 90 2a ac [0m
+[0;32mI (77343) i2c_imu: f1 b8 d7 70 2a 8c [0m
+[0;32mI (78343) i2c_imu: f2 08 d6 e8 2b 08 [0m
+[0;32mI (79343) i2c_imu: f1 ec d7 cc 2a a0 [0m
+[0;32mI (80343) i2c_imu: f1 dc d7 40 29 e4 [0m
+[0;32mI (81343) i2c_imu: f1 cc d7 dc 2a e0 [0m
+[0;32mI (82343) i2c_imu: f1 bc d7 fc 2a f0 [0m
+[0;32mI (83343) i2c_imu: f2 20 d7 94 2a 74 [0m
+[0;32mI (84343) i2c_imu: f1 bc d7 cc 2a b4 [0m
+[0;32mI (85343) i2c_imu: f1 a8 d7 f8 2a f0 [0m
+[0;32mI (86343) i2c_imu: f1 78 d8 50 2b 1c [0m
+[0;32mI (87343) i2c_imu: f1 cc d8 44 2b 64 [0m
+[0;32mI (88343) i2c_imu: f2 18 d8 8c 2a c8 [0m
+[0;32mI (89343) i2c_imu: f1 7c d7 d8 2b 00 [0m
+[0;32mI (90343) i2c_imu: f1 c8 d8 1c 2a f0 [0m
+[0;32mI (91343) i2c_imu: f1 94 d8 60 2b 74 [0m
+[0;32mI (92343) i2c_imu: f1 94 d8 90 2b 34 [0m
+[0;32mI (93343) i2c_imu: f1 a8 d8 30 2b 24 [0m
+[0;32mI (94343) i2c_imu: f1 a0 d8 08 2a a4 [0m
+[0;32mI (95343) i2c_imu: f1 c4 d7 d4 2b 18 [0m
+[0;32mI (96343) i2c_imu: f1 88 d8 34 2a b4 [0m
+[0;32mI (97343) i2c_imu: f1 e8 d7 94 2a ec [0m
+[0;32mI (98343) i2c_imu: f1 e8 d7 d4 2a e0 [0m
+[0;32mI (99343) i2c_imu: f1 e8 d8 38 2a a4 [0m
+[0;32mI (100343) i2c_imu: f1 e8 d8 78 2a 2c [0m
+[0;32mI (101343) i2c_imu: f1 e0 d8 18 2b 3c [0m
+[0;32mI (102343) i2c_imu: f2 5c d7 c8 2a 58 [0m
+[0;32mI (103343) i2c_imu: f2 24 d8 38 2b 54 [0m
+[0;32mI (104343) i2c_imu: f1 fc d8 28 2a d8 [0m
+[0;32mI (105343) i2c_imu: f1 f8 d8 18 2a bc [0m
+[0;32mI (106343) i2c_imu: f2 14 d8 68 2a e4 [0m
+[0;32mI (107343) i2c_imu: f1 c0 d7 a8 2b 14 [0m
+[0;32mI (108343) i2c_imu: f1 8c d7 ec 2a cc [0m
+[0;32mI (109343) i2c_imu: f1 f4 d7 d4 2a d0 [0m
+[0;32mI (110343) i2c_imu: f2 20 d8 f4 2a 54 [0m
+[0;32mI (111343) i2c_imu: f1 74 d8 5c 2b 44 [0m
+[0;32mI (112343) i2c_imu: f1 c4 d8 50 29 e0 [0m
+[0;32mI (113343) i2c_imu: f2 1c d8 4c 2b ac [0m
+[0;32mI (114343) i2c_imu: f1 d4 d8 8c 2b 40 [0m
+[0;32mI (115343) i2c_imu: f1 b4 d8 cc 2b a0 [0m
+[0;32mI (116343) i2c_imu: f1 80 d8 44 2b 44 [0m
+[0;32mI (117343) i2c_imu: f1 f4 d8 10 2b 50 [0m
+[0;32mI (118343) i2c_imu: f1 ec d8 18 2b 64 [0m
+[0;32mI (119343) i2c_imu: f1 e8 d8 60 2b 54 [0m
+[0;32mI (120343) i2c_imu: f1 d0 d8 84 2a f8 [0m
+[0;32mI (121343) i2c_imu: f2 20 d8 60 2b 58 [0m
+[0;32mI (122343) i2c_imu: f1 8c d8 54 2a cc [0m
+[0;32mI (123343) i2c_imu: f1 80 d8 dc 2a a4 [0m
+[0;32mI (124343) i2c_imu: f1 b4 d8 64 2b dc [0m
+[0;32mI (125343) i2c_imu: f1 88 d8 dc 2b 10 [0m
+[0;32mI (126343) i2c_imu: f1 c8 d9 08 2a b8 [0m
+[0;32mI (127343) i2c_imu: f1 d0 d9 0c 2b 68 [0m
+[0;32mI (128343) i2c_imu: f1 70 d8 dc 2b 68 [0m
+[0;32mI (129343) i2c_imu: f1 a8 d9 0c 2b 58 [0m
+[0;32mI (130343) i2c_imu: f1 ec d9 20 2b 08 [0m
+[0;32mI (131343) i2c_imu: f2 38 d8 98 2b 38 [0m
+[0;32mI (132343) i2c_imu: f1 70 d8 54 2b 70 [0m
+[0;32mI (133343) i2c_imu: f1 f0 d8 a0 2b 80 [0m
+[0;32mI (134343) i2c_imu: f1 a0 d8 c4 2b 1c [0m
+[0;32mI (135343) i2c_imu: f1 f8 d9 04 2a dc [0m
+[0;32mI (136343) i2c_imu: f1 94 d9 30 2a b8 [0m
+[0;32mI (137343) i2c_imu: f1 b0 d8 80 2b e8 [0m
+[0;32mI (138343) i2c_imu: f1 88 d8 9c 2a c4 [0m
+[0;32mI (139343) i2c_imu: f1 c0 d8 cc 2b 6c [0m
+[0;32mI (140343) i2c_imu: f1 a8 d8 c8 2b 5c [0m
+[0;32mI (141343) i2c_imu: f1 e8 d8 f8 2b 68 [0m
+[0;32mI (142343) i2c_imu: f1 d0 d8 94 2b 7c [0m
+[0;32mI (143343) i2c_imu: f1 b8 d8 b8 2a f4 [0m
+[0;32mI (144343) i2c_imu: f1 78 d8 b8 2b 50 [0m
+[0;32mI (145343) i2c_imu: f1 84 d8 b8 2b 28 [0m
+[0;32mI (146343) i2c_imu: f1 8c d8 b8 2b 14 [0m
+[0;32mI (147343) i2c_imu: f1 90 d8 78 2b 2c [0m
+[0;32mI (148343) i2c_imu: f1 e0 d8 f0 2b 90 [0m
+[0;32mI (149343) i2c_imu: f1 80 d8 b0 2b 08 [0m
+[0;32mI (150343) i2c_imu: f2 24 d8 d0 2b 20 [0m
+[0;32mI (151343) i2c_imu: f1 80 d8 74 2b dc [0m
+[0;32mI (152343) i2c_imu: f1 7c d9 1c 2b 34 [0m
+[0;32mI (153343) i2c_imu: f1 cc d8 a4 2b 50 [0m
+[0;32mI (154343) i2c_imu: f1 30 d8 bc 2a cc [0m
+[0;32mI (155343) i2c_imu: f1 54 d8 a0 2a d0 [0m
+[0;32mI (156343) i2c_imu: f1 98 d8 a0 2b 08 [0m
+[0;32mI (157343) i2c_imu: f1 54 d8 44 2b 18 [0m
+[0;32mI (158343) i2c_imu: f1 d4 d8 a0 2b 98 [0m
+[0;32mI (159343) i2c_imu: f1 70 d8 48 2b 9c [0m
+[0;32mI (160343) i2c_imu: f1 68 d9 0c 2b 24 [0m
+[0;32mI (161343) i2c_imu: f1 f4 d8 b8 2b 10 [0m
+[0;32mI (162343) i2c_imu: f1 c0 d8 a4 2b 58 [0m
+[0;32mI (163343) i2c_imu: f1 6c d8 a8 2b 28 [0m
+[0;32mI (164343) i2c_imu: f2 28 d8 9c 2b a0 [0m
+[0;32mI (165343) i2c_imu: f1 d0 d8 5c 2a f8 [0m
+[0;32mI (166343) i2c_imu: f1 94 d8 50 2c 30 [0m
+[0;32mI (167343) i2c_imu: f1 cc d8 c8 2a f0 [0m
+[0;32mI (168343) i2c_imu: f1 5c d9 04 2b 0c [0m
+[0;32mI (169343) i2c_imu: f1 60 d9 4c 2a 68 [0m
+[0;32mI (170343) i2c_imu: f1 c8 d9 04 2b 34 [0m
+[0;32mI (171343) i2c_imu: f1 30 d8 e4 2a 58 [0m
+[0;32mI (172343) i2c_imu: f1 d8 d8 b8 2b dc [0m
+[0;32mI (173343) i2c_imu: f1 68 d8 d8 2b e0 [0m
+[0;32mI (174343) i2c_imu: f1 38 d8 c8 2b c0 [0m
+[0;32mI (175343) i2c_imu: f1 70 d9 28 2b 70 [0m
+[0;32mI (176343) i2c_imu: f1 c0 d9 2c 2b b4 [0m
+[0;32mI (177343) i2c_imu: f1 38 d8 a0 2b 64 [0m
+[0;32mI (178343) i2c_imu: f1 a4 d9 14 2b 78 [0m
+[0;32mI (179343) i2c_imu: f1 b4 d9 04 2b 34 [0m
+[0;32mI (180343) i2c_imu: f1 58 d8 b0 2b 9c [0m
+[0;32mI (181343) i2c_imu: f1 68 d9 38 2c 70 [0m
+[0;32mI (182343) i2c_imu: f1 94 d9 60 2b ac [0m
+[0;32mI (183343) i2c_imu: f1 a4 d9 44 2b 98 [0m
+[0;32mI (184343) i2c_imu: f1 80 d9 08 2b c8 [0m
+[0;32mI (185343) i2c_imu: f1 98 d9 80 2b 7c [0m
+[0;32mI (186343) i2c_imu: f1 54 d9 50 2b 78 [0m
+[0;32mI (187343) i2c_imu: f1 68 d9 38 2b c4 [0m
+[0;32mI (188343) i2c_imu: f1 68 d9 1c 2b 7c [0m
+[0;32mI (189343) i2c_imu: f1 84 d9 38 2b 4c [0m
+[0;32mI (190343) i2c_imu: f1 d8 d9 60 2c 08 [0m
+[0;32mI (191343) i2c_imu: f1 c8 d9 38 2b 78 [0m
+[0;32mI (192343) i2c_imu: f1 3c d9 28 2b 90 [0m
+[0;32mI (193343) i2c_imu: f1 68 d8 f0 2b e0 [0m
+[0;32mI (194343) i2c_imu: f1 9c d8 e4 2c 3c [0m
+[0;32mI (195343) i2c_imu: f1 90 d9 30 2b d8 [0m
+[0;32mI (196343) i2c_imu: f1 6c d9 28 2c 20 [0m
+[0;32mI (197343) i2c_imu: f1 80 d9 30 2b 70 [0m
+[0;32mI (198343) i2c_imu: f1 3c d9 4c 2c 24 [0m
+[0;32mI (199343) i2c_imu: f1 94 d9 88 2c 14 [0m
+[0;32mI (200343) i2c_imu: f1 b8 da 00 2c 04 [0m
+[0;32mI (201343) i2c_imu: f1 54 d9 e0 2b f0 [0m
+[0;32mI (202343) i2c_imu: f1 78 d9 60 2c 50 [0m
+[0;32mI (203343) i2c_imu: f1 54 d9 a4 2b c8 [0m
+[0;32mI (204343) i2c_imu: f1 98 d9 ec 2b 74 [0m
+[0;32mI (205343) i2c_imu: f1 60 d9 b8 2c 04 [0m
+[0;32mI (206343) i2c_imu: f1 c4 d9 38 2b fc [0m
+[0;32mI (207343) i2c_imu: f1 b4 d9 d4 2b dc [0m
+[0;32mI (208343) i2c_imu: f1 3c d9 c8 2b ac [0m
+[0;32mI (209343) i2c_imu: f1 24 d9 28 2c 2c [0m
+[0;32mI (210343) i2c_imu: f1 28 d9 78 2b 90 [0m
+[0;32mI (211343) i2c_imu: f1 2c d9 bc 2c 28 [0m
+[0;32mI (212343) i2c_imu: f1 7c d9 d4 2c 50 [0m
+[0;32mI (213343) i2c_imu: f1 60 d9 d8 2c 28 [0m
+[0;32mI (214343) i2c_imu: f1 8c d9 80 2c 00 [0m
+[0;32mI (215343) i2c_imu: f1 24 d9 cc 2b e4 [0m
+[0;32mI (216343) i2c_imu: f1 68 d9 98 2b d8 [0m
+[0;32mI (217343) i2c_imu: f1 94 d9 44 2c 5c [0m
+[0;32mI (218343) i2c_imu: f1 54 d9 70 2c 24 [0m
+[0;32mI (219343) i2c_imu: f1 48 da 3c 2c a8 [0m
+[0;32mI (220343) i2c_imu: f1 50 d9 c4 2b ac [0m
+[0;32mI (221343) i2c_imu: f1 78 d9 58 2b 9c [0m
+[0;32mI (222343) i2c_imu: f1 1c d9 80 2b 4c [0m
+[0;32mI (223343) i2c_imu: f1 70 d9 c0 2c 2c [0m
+[0;32mI (224343) i2c_imu: f1 38 d9 8c 2c 5c [0m
+[0;32mI (225343) i2c_imu: f1 78 d9 9c 2c 18 [0m
+[0;32mI (226343) i2c_imu: f1 80 d9 d8 2c 84 [0m
+[0;32mI (227343) i2c_imu: f1 88 d9 70 2c 0c [0m
+[0;32mI (228343) i2c_imu: f1 d0 d9 44 2c 18 [0m
+[0;32mI (229343) i2c_imu: f1 80 d9 84 2c 24 [0m
+[0;32mI (230343) i2c_imu: f1 b0 d9 d8 2c 90 [0m
+[0;32mI (231343) i2c_imu: f1 98 d9 c0 2c 40 [0m
+[0;32mI (232343) i2c_imu: f1 28 d9 88 2c 58 [0m
+[0;32mI (233343) i2c_imu: f1 7c d9 70 2c 34 [0m
+[0;32mI (234343) i2c_imu: f1 28 d9 dc 2b ac [0m
+[0;32mI (235343) i2c_imu: f1 a0 d9 f0 2c 04 [0m
+[0;32mI (236343) i2c_imu: f1 74 d9 d4 2c a0 [0m
+[0;32mI (237343) i2c_imu: f0 ec d9 d0 2c 88 [0m
+[0;32mI (238343) i2c_imu: f1 38 d9 b0 2b a8 [0m
+[0;32mI (239343) i2c_imu: f1 58 d9 a8 2b 7c [0m
+[0;32mI (240343) i2c_imu: f1 80 da 20 2b b0 [0m
+[0;32mI (241343) i2c_imu: f1 90 d9 ac 2b fc [0m
+[0;32mI (242343) i2c_imu: f1 d8 d9 a8 2b e8 [0m
+[0;32mI (243343) i2c_imu: f1 a8 d9 a8 2b d4 [0m
+[0;32mI (244343) i2c_imu: f1 90 d9 f4 2c 74 [0m
+[0;32mI (245343) i2c_imu: f1 a8 d9 50 2b f4 [0m
+[0;32mI (246343) i2c_imu: f1 90 d9 b8 2c 70 [0m
+[0;32mI (247343) i2c_imu: f1 60 da 3c 2c 40 [0m
+[0;32mI (248343) i2c_imu: f1 68 d9 e4 2b 80 [0m
+[0;32mI (249343) i2c_imu: f1 20 d9 a4 2c 4c [0m
+[0;32mI (250343) i2c_imu: f1 98 d9 d4 2c 88 [0m
+[0;32mI (251343) i2c_imu: f1 34 da 18 2b cc [0m
+[0;32mI (252343) i2c_imu: f0 f8 da 1c 2b cc [0m
+[0;32mI (253343) i2c_imu: f1 b8 da 10 2c 90 [0m
+[0;32mI (254343) i2c_imu: f1 84 d9 cc 2c 28 [0m
+[0;32mI (255343) i2c_imu: f1 6c da 0c 2c 38 [0m
+[0;32mI (256343) i2c_imu: f1 a8 da 58 2c 44 [0m
+[0;32mI (257343) i2c_imu: f1 2c da 28 2c 54 [0m
+[0;32mI (258343) i2c_imu: f1 1c d9 e8 2c 20 [0m
+[0;32mI (259343) i2c_imu: f1 84 da 80 2c 34 [0m

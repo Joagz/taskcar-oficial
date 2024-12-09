@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "taskcar_motor_driver",
-    "project_version":    "3384546-dirty",
+    "project_version":    "942c85b-dirty",
     "project_path":       "/home/joagz/taskcar-oficial/taskcar-motor-driver",
     "idf_path":           "/home/joagz/esp/esp-idf",
     "build_dir":          "/home/joagz/taskcar-oficial/taskcar-motor-driver/build",
@@ -25,8 +25,8 @@
         "COMPONENT_KCONFIGS_PROJBUILD" : "/home/joagz/esp/esp-idf/components/bootloader/Kconfig.projbuild;/home/joagz/esp/esp-idf/components/esp_app_format/Kconfig.projbuild;/home/joagz/esp/esp-idf/components/esp_rom/Kconfig.projbuild;/home/joagz/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/joagz/esp/esp-idf/components/partition_table/Kconfig.projbuild;/home/joagz/taskcar-oficial/taskcar-motor-driver/main/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "newlib", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "xtensa" ],
-    "build_components" : [ "app_trace", "app_update", "bootloader", "bootloader_support", "bt", "cmock", "console", "cxx", "driver", "efuse", "esp-tls", "esp_adc", "esp_app_format", "esp_bootloader_format", "esp_coex", "esp_common", "esp_eth", "esp_event", "esp_gdbstub", "esp_hid", "esp_http_client", "esp_http_server", "esp_https_ota", "esp_https_server", "esp_hw_support", "esp_lcd", "esp_local_ctrl", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_system", "esp_timer", "esp_wifi", "espcoredump", "esptool_py", "fatfs", "freertos", "hal", "heap", "http_parser", "idf_test", "ieee802154", "json", "log", "lwip", "main", "mbedtls", "motor_driver", "mqtt", "newlib", "nvs_flash", "nvs_sec_provider", "openthread", "partition_table", "perfmon", "protobuf-c", "protocomm", "pthread", "sdmmc", "soc", "spi_flash", "spiffs", "tcp_transport", "ulp", "unity", "usb", "vfs", "wear_levelling", "wifi_provisioning", "wpa_supplicant", "xtensa", "" ],
-    "build_component_paths" : [ "/home/joagz/esp/esp-idf/components/app_trace", "/home/joagz/esp/esp-idf/components/app_update", "/home/joagz/esp/esp-idf/components/bootloader", "/home/joagz/esp/esp-idf/components/bootloader_support", "/home/joagz/esp/esp-idf/components/bt", "/home/joagz/esp/esp-idf/components/cmock", "/home/joagz/esp/esp-idf/components/console", "/home/joagz/esp/esp-idf/components/cxx", "/home/joagz/esp/esp-idf/components/driver", "/home/joagz/esp/esp-idf/components/efuse", "/home/joagz/esp/esp-idf/components/esp-tls", "/home/joagz/esp/esp-idf/components/esp_adc", "/home/joagz/esp/esp-idf/components/esp_app_format", "/home/joagz/esp/esp-idf/components/esp_bootloader_format", "/home/joagz/esp/esp-idf/components/esp_coex", "/home/joagz/esp/esp-idf/components/esp_common", "/home/joagz/esp/esp-idf/components/esp_eth", "/home/joagz/esp/esp-idf/components/esp_event", "/home/joagz/esp/esp-idf/components/esp_gdbstub", "/home/joagz/esp/esp-idf/components/esp_hid", "/home/joagz/esp/esp-idf/components/esp_http_client", "/home/joagz/esp/esp-idf/components/esp_http_server", "/home/joagz/esp/esp-idf/components/esp_https_ota", "/home/joagz/esp/esp-idf/components/esp_https_server", "/home/joagz/esp/esp-idf/components/esp_hw_support", "/home/joagz/esp/esp-idf/components/esp_lcd", "/home/joagz/esp/esp-idf/components/esp_local_ctrl", "/home/joagz/esp/esp-idf/components/esp_mm", "/home/joagz/esp/esp-idf/components/esp_netif", "/home/joagz/esp/esp-idf/components/esp_netif_stack", "/home/joagz/esp/esp-idf/components/esp_partition", "/home/joagz/esp/esp-idf/components/esp_phy", "/home/joagz/esp/esp-idf/components/esp_pm", "/home/joagz/esp/esp-idf/components/esp_psram", "/home/joagz/esp/esp-idf/components/esp_ringbuf", "/home/joagz/esp/esp-idf/components/esp_rom", "/home/joagz/esp/esp-idf/components/esp_system", "/home/joagz/esp/esp-idf/components/esp_timer", "/home/joagz/esp/esp-idf/components/esp_wifi", "/home/joagz/esp/esp-idf/components/espcoredump", "/home/joagz/esp/esp-idf/components/esptool_py", "/home/joagz/esp/esp-idf/components/fatfs", "/home/joagz/esp/esp-idf/components/freertos", "/home/joagz/esp/esp-idf/components/hal", "/home/joagz/esp/esp-idf/components/heap", "/home/joagz/esp/esp-idf/components/http_parser", "/home/joagz/esp/esp-idf/components/idf_test", "/home/joagz/esp/esp-idf/components/ieee802154", "/home/joagz/esp/esp-idf/components/json", "/home/joagz/esp/esp-idf/components/log", "/home/joagz/esp/esp-idf/components/lwip", "/home/joagz/taskcar-oficial/taskcar-motor-driver/main", "/home/joagz/esp/esp-idf/components/mbedtls", "/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/motor_driver", "/home/joagz/esp/esp-idf/components/mqtt", "/home/joagz/esp/esp-idf/components/newlib", "/home/joagz/esp/esp-idf/components/nvs_flash", "/home/joagz/esp/esp-idf/components/nvs_sec_provider", "/home/joagz/esp/esp-idf/components/openthread", "/home/joagz/esp/esp-idf/components/partition_table", "/home/joagz/esp/esp-idf/components/perfmon", "/home/joagz/esp/esp-idf/components/protobuf-c", "/home/joagz/esp/esp-idf/components/protocomm", "/home/joagz/esp/esp-idf/components/pthread", "/home/joagz/esp/esp-idf/components/sdmmc", "/home/joagz/esp/esp-idf/components/soc", "/home/joagz/esp/esp-idf/components/spi_flash", "/home/joagz/esp/esp-idf/components/spiffs", "/home/joagz/esp/esp-idf/components/tcp_transport", "/home/joagz/esp/esp-idf/components/ulp", "/home/joagz/esp/esp-idf/components/unity", "/home/joagz/esp/esp-idf/components/usb", "/home/joagz/esp/esp-idf/components/vfs", "/home/joagz/esp/esp-idf/components/wear_levelling", "/home/joagz/esp/esp-idf/components/wifi_provisioning", "/home/joagz/esp/esp-idf/components/wpa_supplicant", "/home/joagz/esp/esp-idf/components/xtensa", "" ],
+    "build_components" : [ "app_trace", "app_update", "bootloader", "bootloader_support", "bt", "cmock", "console", "cxx", "driver", "efuse", "esp-tls", "esp_adc", "esp_app_format", "esp_bootloader_format", "esp_coex", "esp_common", "esp_eth", "esp_event", "esp_gdbstub", "esp_hid", "esp_http_client", "esp_http_server", "esp_https_ota", "esp_https_server", "esp_hw_support", "esp_lcd", "esp_local_ctrl", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_system", "esp_timer", "esp_wifi", "espcoredump", "espressif__mpu6050", "esptool_py", "fatfs", "freertos", "hal", "heap", "http_parser", "i2c_imu", "idf_test", "ieee802154", "json", "log", "lwip", "main", "mbedtls", "motor_driver", "mqtt", "newlib", "nvs_flash", "nvs_sec_provider", "openthread", "partition_table", "perfmon", "protobuf-c", "protocomm", "pthread", "sdmmc", "soc", "spi_flash", "spiffs", "tcp_transport", "ulp", "unity", "usb", "vfs", "wear_levelling", "wifi_provisioning", "wpa_supplicant", "xtensa", "" ],
+    "build_component_paths" : [ "/home/joagz/esp/esp-idf/components/app_trace", "/home/joagz/esp/esp-idf/components/app_update", "/home/joagz/esp/esp-idf/components/bootloader", "/home/joagz/esp/esp-idf/components/bootloader_support", "/home/joagz/esp/esp-idf/components/bt", "/home/joagz/esp/esp-idf/components/cmock", "/home/joagz/esp/esp-idf/components/console", "/home/joagz/esp/esp-idf/components/cxx", "/home/joagz/esp/esp-idf/components/driver", "/home/joagz/esp/esp-idf/components/efuse", "/home/joagz/esp/esp-idf/components/esp-tls", "/home/joagz/esp/esp-idf/components/esp_adc", "/home/joagz/esp/esp-idf/components/esp_app_format", "/home/joagz/esp/esp-idf/components/esp_bootloader_format", "/home/joagz/esp/esp-idf/components/esp_coex", "/home/joagz/esp/esp-idf/components/esp_common", "/home/joagz/esp/esp-idf/components/esp_eth", "/home/joagz/esp/esp-idf/components/esp_event", "/home/joagz/esp/esp-idf/components/esp_gdbstub", "/home/joagz/esp/esp-idf/components/esp_hid", "/home/joagz/esp/esp-idf/components/esp_http_client", "/home/joagz/esp/esp-idf/components/esp_http_server", "/home/joagz/esp/esp-idf/components/esp_https_ota", "/home/joagz/esp/esp-idf/components/esp_https_server", "/home/joagz/esp/esp-idf/components/esp_hw_support", "/home/joagz/esp/esp-idf/components/esp_lcd", "/home/joagz/esp/esp-idf/components/esp_local_ctrl", "/home/joagz/esp/esp-idf/components/esp_mm", "/home/joagz/esp/esp-idf/components/esp_netif", "/home/joagz/esp/esp-idf/components/esp_netif_stack", "/home/joagz/esp/esp-idf/components/esp_partition", "/home/joagz/esp/esp-idf/components/esp_phy", "/home/joagz/esp/esp-idf/components/esp_pm", "/home/joagz/esp/esp-idf/components/esp_psram", "/home/joagz/esp/esp-idf/components/esp_ringbuf", "/home/joagz/esp/esp-idf/components/esp_rom", "/home/joagz/esp/esp-idf/components/esp_system", "/home/joagz/esp/esp-idf/components/esp_timer", "/home/joagz/esp/esp-idf/components/esp_wifi", "/home/joagz/esp/esp-idf/components/espcoredump", "/home/joagz/taskcar-oficial/taskcar-motor-driver/managed_components/espressif__mpu6050", "/home/joagz/esp/esp-idf/components/esptool_py", "/home/joagz/esp/esp-idf/components/fatfs", "/home/joagz/esp/esp-idf/components/freertos", "/home/joagz/esp/esp-idf/components/hal", "/home/joagz/esp/esp-idf/components/heap", "/home/joagz/esp/esp-idf/components/http_parser", "/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/i2c_imu", "/home/joagz/esp/esp-idf/components/idf_test", "/home/joagz/esp/esp-idf/components/ieee802154", "/home/joagz/esp/esp-idf/components/json", "/home/joagz/esp/esp-idf/components/log", "/home/joagz/esp/esp-idf/components/lwip", "/home/joagz/taskcar-oficial/taskcar-motor-driver/main", "/home/joagz/esp/esp-idf/components/mbedtls", "/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/motor_driver", "/home/joagz/esp/esp-idf/components/mqtt", "/home/joagz/esp/esp-idf/components/newlib", "/home/joagz/esp/esp-idf/components/nvs_flash", "/home/joagz/esp/esp-idf/components/nvs_sec_provider", "/home/joagz/esp/esp-idf/components/openthread", "/home/joagz/esp/esp-idf/components/partition_table", "/home/joagz/esp/esp-idf/components/perfmon", "/home/joagz/esp/esp-idf/components/protobuf-c", "/home/joagz/esp/esp-idf/components/protocomm", "/home/joagz/esp/esp-idf/components/pthread", "/home/joagz/esp/esp-idf/components/sdmmc", "/home/joagz/esp/esp-idf/components/soc", "/home/joagz/esp/esp-idf/components/spi_flash", "/home/joagz/esp/esp-idf/components/spiffs", "/home/joagz/esp/esp-idf/components/tcp_transport", "/home/joagz/esp/esp-idf/components/ulp", "/home/joagz/esp/esp-idf/components/unity", "/home/joagz/esp/esp-idf/components/usb", "/home/joagz/esp/esp-idf/components/vfs", "/home/joagz/esp/esp-idf/components/wear_levelling", "/home/joagz/esp/esp-idf/components/wifi_provisioning", "/home/joagz/esp/esp-idf/components/wpa_supplicant", "/home/joagz/esp/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
         "app_trace": {
             "alias": "idf::app_trace",
@@ -628,6 +628,21 @@
             "sources": [ "/home/joagz/esp/esp-idf/components/espcoredump/src/core_dump_common.c", "/home/joagz/esp/esp-idf/components/espcoredump/src/core_dump_flash.c", "/home/joagz/esp/esp-idf/components/espcoredump/src/core_dump_uart.c", "/home/joagz/esp/esp-idf/components/espcoredump/src/core_dump_elf.c", "/home/joagz/esp/esp-idf/components/espcoredump/src/core_dump_binary.c", "/home/joagz/esp/esp-idf/components/espcoredump/src/core_dump_sha.c", "/home/joagz/esp/esp-idf/components/espcoredump/src/core_dump_crc.c", "/home/joagz/esp/esp-idf/components/espcoredump/src/port/xtensa/core_dump_port.c" ],
             "include_dirs": [ "include", "include/port/xtensa" ]
         },
+        "espressif__mpu6050": {
+            "alias": "idf::espressif__mpu6050",
+            "target": "___idf_espressif__mpu6050",
+            "prefix": "idf",
+            "dir": "/home/joagz/taskcar-oficial/taskcar-motor-driver/managed_components/espressif__mpu6050",
+            "type": "LIBRARY",
+            "lib": "__idf_espressif__mpu6050",
+            "reqs": [ "driver" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/espressif__mpu6050/libespressif__mpu6050.a",
+            "sources": [ "/home/joagz/taskcar-oficial/taskcar-motor-driver/managed_components/espressif__mpu6050/mpu6050.c" ],
+            "include_dirs": [ "include" ]
+        },
         "esptool_py": {
             "alias": "idf::esptool_py",
             "target": "___idf_esptool_py",
@@ -718,6 +733,21 @@
             "sources": [ "/home/joagz/esp/esp-idf/components/http_parser/http_parser.c" ],
             "include_dirs": [ "." ]
         },
+        "i2c_imu": {
+            "alias": "idf::i2c_imu",
+            "target": "___idf_i2c_imu",
+            "prefix": "idf",
+            "dir": "/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/i2c_imu",
+            "type": "LIBRARY",
+            "lib": "__idf_i2c_imu",
+            "reqs": [ "driver" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/i2c_imu/libi2c_imu.a",
+            "sources": [ "/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/i2c_imu/i2c_imu.c" ],
+            "include_dirs": [ "." ]
+        },
         "idf_test": {
             "alias": "idf::idf_test",
             "target": "___idf_idf_test",
@@ -800,13 +830,13 @@
             "dir": "/home/joagz/taskcar-oficial/taskcar-motor-driver/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [ "motor_driver", "driver" ],
-            "priv_reqs": [],
+            "reqs": [ "motor_driver", "i2c_imu", "driver" ],
+            "priv_reqs": [ "espressif__mpu6050" ],
             "managed_reqs": [],
-            "managed_priv_reqs": [],
+            "managed_priv_reqs": [ "espressif__mpu6050" ],
             "file": "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/main/libmain.a",
             "sources": [ "/home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c" ],
-            "include_dirs": [ ".", "components/motor_driver" ]
+            "include_dirs": [ ".", "components/motor_driver", "components/i2c_imu" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -830,8 +860,8 @@
             "dir": "/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/motor_driver",
             "type": "LIBRARY",
             "lib": "__idf_motor_driver",
-            "reqs": [],
-            "priv_reqs": [ "driver" ],
+            "reqs": [ "driver" ],
+            "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/motor_driver/libmotor_driver.a",
@@ -2127,11 +2157,23 @@
             "prefix": "idf",
             "dir": "/home/joagz/taskcar-oficial/taskcar-motor-driver/main",
             "lib": "__idf_main",
-            "reqs": [ "motor_driver", "driver" ],
+            "reqs": [ "motor_driver", "i2c_imu", "driver" ],
+            "priv_reqs": [ "espressif__mpu6050" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [ "espressif__mpu6050" ],
+            "include_dirs": [ ".", "components/motor_driver", "components/i2c_imu" ]
+        },
+        "i2c_imu": {
+            "alias": "idf::i2c_imu",
+            "target": "___idf_i2c_imu",
+            "prefix": "idf",
+            "dir": "/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/i2c_imu",
+            "lib": "__idf_i2c_imu",
+            "reqs": [ "driver" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ ".", "components/motor_driver" ]
+            "include_dirs": [ "." ]
         },
         "motor_driver": {
             "alias": "idf::motor_driver",
@@ -2139,11 +2181,23 @@
             "prefix": "idf",
             "dir": "/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/motor_driver",
             "lib": "__idf_motor_driver",
-            "reqs": [],
-            "priv_reqs": [ "driver" ],
+            "reqs": [ "driver" ],
+            "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "." ]
+        },
+        "espressif__mpu6050": {
+            "alias": "idf::espressif__mpu6050",
+            "target": "___idf_espressif__mpu6050",
+            "prefix": "idf",
+            "dir": "/home/joagz/taskcar-oficial/taskcar-motor-driver/managed_components/espressif__mpu6050",
+            "lib": "__idf_espressif__mpu6050",
+            "reqs": [ "driver" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
         }
     },
     "debug_prefix_map_gdbinit": ""

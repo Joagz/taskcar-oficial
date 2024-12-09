@@ -1,0 +1,8 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/esp-idf/esptool_py && /home/joagz/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/joagz/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/9] Building C object esp-idf/i2c_imu/CMakeFiles/__idf_i2c_imu.dir/i2c_imu.c.obj
+[3/9] No install step for 'bootloader'
+[4/9] Linking C static library esp-idf/i2c_imu/libi2c_imu.a
+[5/9] Completed 'bootloader'
+[6/9] Generating ld/sections.ld

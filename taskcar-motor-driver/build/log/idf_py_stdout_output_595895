@@ -1,0 +1,59 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+NOTICE: Processing 2 dependencies:
+NOTICE: [1/2] espressif/mpu6050 (1.2.0)
+NOTICE: [2/2] idf (5.2.3)
+-- Project sdkconfig file /home/joagz/taskcar-oficial/taskcar-motor-driver/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "taskcar_motor_driver" version: 942c85b-dirty
+-- Adding linker script /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/joagz/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__mpu6050 esptool_py fatfs freertos hal heap http_parser i2c_imu idf_test ieee802154 json log lwip main mbedtls motor_driver mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/joagz/esp/esp-idf/components/app_trace /home/joagz/esp/esp-idf/components/app_update /home/joagz/esp/esp-idf/components/bootloader /home/joagz/esp/esp-idf/components/bootloader_support /home/joagz/esp/esp-idf/components/bt /home/joagz/esp/esp-idf/components/cmock /home/joagz/esp/esp-idf/components/console /home/joagz/esp/esp-idf/components/cxx /home/joagz/esp/esp-idf/components/driver /home/joagz/esp/esp-idf/components/efuse /home/joagz/esp/esp-idf/components/esp-tls /home/joagz/esp/esp-idf/components/esp_adc /home/joagz/esp/esp-idf/components/esp_app_format /home/joagz/esp/esp-idf/components/esp_bootloader_format /home/joagz/esp/esp-idf/components/esp_coex /home/joagz/esp/esp-idf/components/esp_common /home/joagz/esp/esp-idf/components/esp_eth /home/joagz/esp/esp-idf/components/esp_event /home/joagz/esp/esp-idf/components/esp_gdbstub /home/joagz/esp/esp-idf/components/esp_hid /home/joagz/esp/esp-idf/components/esp_http_client /home/joagz/esp/esp-idf/components/esp_http_server /home/joagz/esp/esp-idf/components/esp_https_ota /home/joagz/esp/esp-idf/components/esp_https_server /home/joagz/esp/esp-idf/components/esp_hw_support /home/joagz/esp/esp-idf/components/esp_lcd /home/joagz/esp/esp-idf/components/esp_local_ctrl /home/joagz/esp/esp-idf/components/esp_mm /home/joagz/esp/esp-idf/components/esp_netif /home/joagz/esp/esp-idf/components/esp_netif_stack /home/joagz/esp/esp-idf/components/esp_partition /home/joagz/esp/esp-idf/components/esp_phy /home/joagz/esp/esp-idf/components/esp_pm /home/joagz/esp/esp-idf/components/esp_psram /home/joagz/esp/esp-idf/components/esp_ringbuf /home/joagz/esp/esp-idf/components/esp_rom /home/joagz/esp/esp-idf/components/esp_system /home/joagz/esp/esp-idf/components/esp_timer /home/joagz/esp/esp-idf/components/esp_wifi /home/joagz/esp/esp-idf/components/espcoredump /home/joagz/taskcar-oficial/taskcar-motor-driver/managed_components/espressif__mpu6050 /home/joagz/esp/esp-idf/components/esptool_py /home/joagz/esp/esp-idf/components/fatfs /home/joagz/esp/esp-idf/components/freertos /home/joagz/esp/esp-idf/components/hal /home/joagz/esp/esp-idf/components/heap /home/joagz/esp/esp-idf/components/http_parser /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/i2c_imu /home/joagz/esp/esp-idf/components/idf_test /home/joagz/esp/esp-idf/components/ieee802154 /home/joagz/esp/esp-idf/components/json /home/joagz/esp/esp-idf/components/log /home/joagz/esp/esp-idf/components/lwip /home/joagz/taskcar-oficial/taskcar-motor-driver/main /home/joagz/esp/esp-idf/components/mbedtls /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/motor_driver /home/joagz/esp/esp-idf/components/mqtt /home/joagz/esp/esp-idf/components/newlib /home/joagz/esp/esp-idf/components/nvs_flash /home/joagz/esp/esp-idf/components/nvs_sec_provider /home/joagz/esp/esp-idf/components/openthread /home/joagz/esp/esp-idf/components/partition_table /home/joagz/esp/esp-idf/components/perfmon /home/joagz/esp/esp-idf/components/protobuf-c /home/joagz/esp/esp-idf/components/protocomm /home/joagz/esp/esp-idf/components/pthread /home/joagz/esp/esp-idf/components/sdmmc /home/joagz/esp/esp-idf/components/soc /home/joagz/esp/esp-idf/components/spi_flash /home/joagz/esp/esp-idf/components/spiffs /home/joagz/esp/esp-idf/components/tcp_transport /home/joagz/esp/esp-idf/components/ulp /home/joagz/esp/esp-idf/components/unity /home/joagz/esp/esp-idf/components/usb /home/joagz/esp/esp-idf/components/vfs /home/joagz/esp/esp-idf/components/wear_levelling /home/joagz/esp/esp-idf/components/wifi_provisioning /home/joagz/esp/esp-idf/components/wpa_supplicant /home/joagz/esp/esp-idf/components/xtensa
+-- Configuring done (3.3s)
+-- Generating done (0.3s)
+-- Build files have been written to: /home/joagz/taskcar-oficial/taskcar-motor-driver/build
+[1/10] Building C object esp-idf/i2c_imu/CMakeFiles/__idf_i2c_imu.dir/i2c_imu.c.obj
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/i2c_imu/i2c_imu.c:19:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   19 | static const char *TAG = "i2c_imu";
+      |                    ^~~
+[2/10] Linking C static library esp-idf/i2c_imu/libi2c_imu.a
+[3/10] Performing build step for 'bootloader'
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/joagz/taskcar-oficial/taskcar-motor-driver/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Adding linker script /home/joagz/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Bootloader project name: "bootloader" version: 1
+-- Adding linker script /home/joagz/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.ld
+-- Adding linker script /home/joagz/esp/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_bootloader_format esp_common esp_hw_support esp_rom esp_system esptool_py freertos hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: /home/joagz/esp/esp-idf/components/bootloader /home/joagz/esp/esp-idf/components/bootloader_support /home/joagz/esp/esp-idf/components/efuse /home/joagz/esp/esp-idf/components/esp_app_format /home/joagz/esp/esp-idf/components/esp_bootloader_format /home/joagz/esp/esp-idf/components/esp_common /home/joagz/esp/esp-idf/components/esp_hw_support /home/joagz/esp/esp-idf/components/esp_rom /home/joagz/esp/esp-idf/components/esp_system /home/joagz/esp/esp-idf/components/esptool_py /home/joagz/esp/esp-idf/components/freertos /home/joagz/esp/esp-idf/components/hal /home/joagz/esp/esp-idf/components/log /home/joagz/esp/esp-idf/components/bootloader/subproject/main /home/joagz/esp/esp-idf/components/bootloader/subproject/components/micro-ecc /home/joagz/esp/esp-idf/components/newlib /home/joagz/esp/esp-idf/components/partition_table /home/joagz/esp/esp-idf/components/soc /home/joagz/esp/esp-idf/components/spi_flash /home/joagz/esp/esp-idf/components/xtensa
+-- Configuring done (1.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader
+[1/2] cd /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/esp-idf/esptool_py && /home/joagz/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/joagz/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[4/10] No install step for 'bootloader'
+[5/10] Completed 'bootloader'
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable taskcar_motor_driver.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/joagz/taskcar-oficial/taskcar-motor-driver/build/taskcar_motor_driver.bin
+[9/10] cd /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/esptool_py && /home/joagz/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/joagz/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/joagz/taskcar-oficial/taskcar-motor-driver/build/partition_table/partition-table.bin /home/joagz/taskcar-oficial/taskcar-motor-driver/build/taskcar_motor_driver.bin
+taskcar_motor_driver.bin binary size 0x31cd0 bytes. Smallest app partition is 0x100000 bytes. 0xce330 bytes (81%) free.
