@@ -8,21 +8,21 @@
 
 #include "i2c_imu.h"
 
-#define I2C_SLAVE_ADDR 0x68
-#define TIMEOUT_MS 100
-#define DELAY_MS 500
+#define I2C_SLAVE_ADDR            0x68
+#define TIMEOUT_MS                100
+#define DELAY_MS                  500
 #define REGISTER_TABLE_SIZE_BYTES 6
-#define SCALING_FACTOR 0.000061
+#define SCALING_FACTOR            0.000061
 
-#define MPU_ACCEL_BEGIN 0x3B
-#define MPU_ACCEL_END 0x40
-#define MPU_PWR_MGMT_1 0x6B
-#define MPU_ACCEL_CONFIG 0x1C
+#define MPU_ACCEL_BEGIN           0x3B
+#define MPU_ACCEL_END             0x40
+#define MPU_PWR_MGMT_1            0x6B
+#define MPU_ACCEL_CONFIG          0x1C
 
-#define MPU_2G_CONFIG 0b00000000
-#define MPU_4G_CONFIG 0b00001000
-#define MPU_8G_CONFIG 0b00010000
-#define MPU_16G_CONFIG 0b00011000
+#define MPU_2G_CONFIG             0b00000000
+#define MPU_4G_CONFIG             0b00001000
+#define MPU_8G_CONFIG             0b00010000
+#define MPU_16G_CONFIG            0b00011000
 
 static const char *TAG = "i2c_imu";
 

@@ -1,0 +1,219 @@
+[1/214] Linking C static library esp-idf/esp_https_ota/libesp_https_ota.a
+[2/214] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[3/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/mps_trace.c.obj
+[4/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/mps_reader.c.obj
+[5/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/debug.c.obj
+[6/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_debug_helpers_generated.c.obj
+[7/214] Linking C static library esp-idf/esp_http_server/libesp_http_server.a
+[8/214] Linking C static library esp-idf/esp_http_client/libesp_http_client.a
+[9/214] Linking C static library esp-idf/tcp_transport/libtcp_transport.a
+[10/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_cache.c.obj
+[11/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_ciphersuites.c.obj
+[12/214] Linking C static library esp-idf/esp_gdbstub/libesp_gdbstub.a
+[13/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_cookie.c.obj
+[14/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_ticket.c.obj
+[15/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_keys.c.obj
+[16/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_server.c.obj
+[17/214] Linking C static library esp-idf/esp_eth/libesp_eth.a
+[18/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_generic.c.obj
+[19/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_client.c.obj
+[20/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_client.c.obj
+[21/214] Linking C static library esp-idf/esp_adc/libesp_adc.a
+[22/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/joagz/esp/esp-idf/components/mbedtls/port/esp_platform_time.c.obj
+[23/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/joagz/esp/esp-idf/components/mbedtls/port/mbedtls_debug.c.obj
+[24/214] Linking C static library esp-idf/esp-tls/libesp-tls.a
+[25/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_msg.c.obj
+[26/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls12_client.c.obj
+[27/214] Linking C static library esp-idf/http_parser/libhttp_parser.a
+[28/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls12_server.c.obj
+[29/214] Linking C static library esp-idf/esp_wifi/libesp_wifi.a
+[30/214] Linking C static library esp-idf/esp_coex/libesp_coex.a
+[31/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.obj
+[32/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs7.c.obj
+[33/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write.c.obj
+[34/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.obj
+[35/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.obj
+[36/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.obj
+[37/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/joagz/esp/esp-idf/components/mbedtls/port/net_sockets.c.obj
+[38/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aesni.c.obj
+[39/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aesce.c.obj
+[40/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aes.c.obj
+[41/214] Linking C static library esp-idf/wpa_supplicant/libwpa_supplicant.a
+[42/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls.c.obj
+[43/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.obj
+[44/214] Linking C static library esp-idf/esp_netif/libesp_netif.a
+[45/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.obj
+[46/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/base64.c.obj
+[47/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aria.c.obj
+[48/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_mod.c.obj
+[49/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/asn1parse.c.obj
+[50/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/asn1write.c.obj
+[51/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_mod_raw.c.obj
+[52/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.obj
+[53/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/block_cipher.c.obj
+[54/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/chachapoly.c.obj
+[55/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/camellia.c.obj
+[56/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/chacha20.c.obj
+[57/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_core.c.obj
+[58/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/constant_time.c.obj
+[59/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ccm.c.obj
+[60/214] Linking C static library esp-idf/lwip/liblwip.a
+[61/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/des.c.obj
+[62/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/cipher_wrap.c.obj
+[63/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ctr_drbg.c.obj
+[64/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/cmac.c.obj
+[65/214] Linking C static library esp-idf/vfs/libvfs.a
+[66/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/dhm.c.obj
+[67/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/cipher.c.obj
+[68/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum.c.obj
+[69/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecjpake.c.obj
+[70/214] Linking C static library esp-idf/esp_phy/libesp_phy.a
+[71/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecdh.c.obj
+[72/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecp_curves_new.c.obj
+[73/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/entropy_poll.c.obj
+[74/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecdsa.c.obj
+[75/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/hkdf.c.obj
+[76/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/entropy.c.obj
+[77/214] Linking C static library esp-idf/nvs_flash/libnvs_flash.a
+[78/214] Linking C static library esp-idf/esp_event/libesp_event.a
+[79/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/gcm.c.obj
+[80/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/md5.c.obj
+[81/214] Linking C static library esp-idf/esp_timer/libesp_timer.a
+[82/214] Linking C static library esp-idf/esp_common/libesp_common.a
+[83/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/memory_buffer_alloc.c.obj
+[84/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/hmac_drbg.c.obj
+[85/214] Linking C static library esp-idf/cxx/libcxx.a
+[86/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/error.c.obj
+[87/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/lmots.c.obj
+[88/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/lms.c.obj
+[89/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/nist_kw.c.obj
+[90/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/padlock.c.obj
+[91/214] Linking C static library esp-idf/newlib/libnewlib.a
+[92/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/md.c.obj
+[93/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecp.c.obj
+[94/214] Linking C static library esp-idf/freertos/libfreertos.a
+[95/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pem.c.obj
+[96/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pk_ecc.c.obj
+[97/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pk_wrap.c.obj
+[98/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecp_curves.c.obj
+[99/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/oid.c.obj
+[100/214] Linking C static library esp-idf/esp_hw_support/libesp_hw_support.a
+[101/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pkcs12.c.obj
+[102/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/platform.c.obj
+[103/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pkcs5.c.obj
+[104/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/poly1305.c.obj
+[105/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pk.c.obj
+[106/214] Linking C static library esp-idf/soc/libsoc.a
+[107/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/platform_util.c.obj
+[108/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pkwrite.c.obj
+[109/214] Linking C static library esp-idf/heap/libheap.a
+[110/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_client.c.obj
+[111/214] Linking C static library esp-idf/log/liblog.a
+[112/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_driver_wrappers_no_static.c.obj
+[113/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_cipher.c.obj
+[114/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_aead.c.obj
+[115/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pkparse.c.obj
+[116/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_ffdh.c.obj
+[117/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_se.c.obj
+[118/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_hash.c.obj
+[119/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_pake.c.obj
+[120/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_ecp.c.obj
+[121/214] Linking C static library esp-idf/hal/libhal.a
+[122/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_mac.c.obj
+[123/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ripemd160.c.obj
+[124/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_its_file.c.obj
+[125/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_rsa.c.obj
+[126/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_slot_management.c.obj
+[127/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_storage.c.obj
+[128/214] Linking C static library esp-idf/esp_rom/libesp_rom.a
+[129/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_util.c.obj
+[130/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/threading.c.obj
+[131/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/sha1.c.obj
+[132/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/rsa_alt_helpers.c.obj
+[133/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/timing.c.obj
+[134/214] Linking C static library esp-idf/esp_system/libesp_system.a
+[135/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/sha256.c.obj
+[136/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/version.c.obj
+[137/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/sha512.c.obj
+[138/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/version_features.c.obj
+[139/214] Linking C static library esp-idf/pthread/libpthread.a
+[140/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/esp_hardware.c.obj
+[141/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/esp_mem.c.obj
+[142/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/esp_timing.c.obj
+[143/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/aes/esp_aes_xts.c.obj
+[144/214] Linking C static library esp-idf/spi_flash/libspi_flash.a
+[145/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/sha3.c.obj
+[146/214] Linking C static library esp-idf/app_update/libapp_update.a
+[147/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/sha/esp_sha.c.obj
+[148/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/aes/esp_aes_common.c.obj
+[149/214] Linking C static library esp-idf/esp_partition/libesp_partition.a
+[150/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/rsa.c.obj
+[151/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/bignum/bignum_alt.c.obj
+[152/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/sha/parallel_engine/sha.c.obj
+[153/214] Linking C static library esp-idf/bootloader_support/libbootloader_support.a
+[154/214] Linking C static library esp-idf/esp_app_format/libesp_app_format.a
+[155/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/bignum/esp_bignum.c.obj
+[156/214] Linking C static library esp-idf/esp_bootloader_format/libesp_bootloader_format.a
+[157/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/md/esp_md.c.obj
+[158/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/aes/block/esp_aes.c.obj
+[159/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/sha/parallel_engine/esp_sha256.c.obj
+[160/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/sha/parallel_engine/esp_sha1.c.obj
+[161/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto.c.obj
+[162/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/aes/esp_aes_gcm.c.obj
+[163/214] Building C object esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entrypoints.c.obj
+[164/214] Building C object esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library/x25519.c.obj
+[165/214] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/joagz/esp/esp-idf/components/mbedtls/port/sha/parallel_engine/esp_sha512.c.obj
+[166/214] Building C object esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library/Hacl_Curve25519_joined.c.obj
+[167/214] Building C object esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library/everest.c.obj
+[168/214] Building C object esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m/p256-m.c.obj
+[169/214] Linking CXX static library esp-idf/mbedtls/mbedtls/library/libmbedtls.a
+[170/214] Performing build step for 'bootloader'
+[1/1] cd /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/esp-idf/esptool_py && /home/joagz/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/joagz/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[171/214] No install step for 'bootloader'
+[172/214] Completed 'bootloader'
+[173/214] Linking CXX static library esp-idf/mbedtls/mbedtls/library/libmbedx509.a
+[174/214] Linking CXX static library esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a
+[175/214] Linking CXX static library esp-idf/mbedtls/mbedtls/3rdparty/p256-m/libp256m.a
+[176/214] Linking CXX static library esp-idf/mbedtls/mbedtls/3rdparty/everest/libeverest.a
+[177/214] Linking C static library esp-idf/mbedtls/libmbedtls.a
+[178/214] Linking C static library esp-idf/esp_pm/libesp_pm.a
+[179/214] Building C object esp-idf/imu_driver/CMakeFiles/__idf_imu_driver.dir/mpu6050.c.obj
+FAILED: esp-idf/imu_driver/CMakeFiles/__idf_imu_driver.dir/mpu6050.c.obj 
+/home/joagz/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.2.3\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/joagz/taskcar-oficial/taskcar-motor-driver/build/config -I/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver -I/home/joagz/esp/esp-idf/components/newlib/platform_include -I/home/joagz/esp/esp-idf/components/freertos/config/include -I/home/joagz/esp/esp-idf/components/freertos/config/include/freertos -I/home/joagz/esp/esp-idf/components/freertos/config/xtensa/include -I/home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/joagz/esp/esp-idf/components/freertos/esp_additions/include -I/home/joagz/esp/esp-idf/components/esp_hw_support/include -I/home/joagz/esp/esp-idf/components/esp_hw_support/include/soc -I/home/joagz/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/joagz/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/joagz/esp/esp-idf/components/heap/include -I/home/joagz/esp/esp-idf/components/log/include -I/home/joagz/esp/esp-idf/components/soc/include -I/home/joagz/esp/esp-idf/components/soc/esp32 -I/home/joagz/esp/esp-idf/components/soc/esp32/include -I/home/joagz/esp/esp-idf/components/hal/platform_port/include -I/home/joagz/esp/esp-idf/components/hal/esp32/include -I/home/joagz/esp/esp-idf/components/hal/include -I/home/joagz/esp/esp-idf/components/esp_rom/include -I/home/joagz/esp/esp-idf/components/esp_rom/include/esp32 -I/home/joagz/esp/esp-idf/components/esp_rom/esp32 -I/home/joagz/esp/esp-idf/components/esp_common/include -I/home/joagz/esp/esp-idf/components/esp_system/include -I/home/joagz/esp/esp-idf/components/esp_system/port/soc -I/home/joagz/esp/esp-idf/components/esp_system/port/include/private -I/home/joagz/esp/esp-idf/components/xtensa/esp32/include -I/home/joagz/esp/esp-idf/components/xtensa/include -I/home/joagz/esp/esp-idf/components/xtensa/deprecated_include -I/home/joagz/esp/esp-idf/components/lwip/include -I/home/joagz/esp/esp-idf/components/lwip/include/apps -I/home/joagz/esp/esp-idf/components/lwip/include/apps/sntp -I/home/joagz/esp/esp-idf/components/lwip/lwip/src/include -I/home/joagz/esp/esp-idf/components/lwip/port/include -I/home/joagz/esp/esp-idf/components/lwip/port/freertos/include -I/home/joagz/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/joagz/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/joagz/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/joagz/esp/esp-idf/components/driver/include -I/home/joagz/esp/esp-idf/components/driver/deprecated -I/home/joagz/esp/esp-idf/components/driver/analog_comparator/include -I/home/joagz/esp/esp-idf/components/driver/dac/include -I/home/joagz/esp/esp-idf/components/driver/gpio/include -I/home/joagz/esp/esp-idf/components/driver/gptimer/include -I/home/joagz/esp/esp-idf/components/driver/i2c/include -I/home/joagz/esp/esp-idf/components/driver/i2s/include -I/home/joagz/esp/esp-idf/components/driver/ledc/include -I/home/joagz/esp/esp-idf/components/driver/mcpwm/include -I/home/joagz/esp/esp-idf/components/driver/parlio/include -I/home/joagz/esp/esp-idf/components/driver/pcnt/include -I/home/joagz/esp/esp-idf/components/driver/rmt/include -I/home/joagz/esp/esp-idf/components/driver/sdio_slave/include -I/home/joagz/esp/esp-idf/components/driver/sdmmc/include -I/home/joagz/esp/esp-idf/components/driver/sigma_delta/include -I/home/joagz/esp/esp-idf/components/driver/spi/include -I/home/joagz/esp/esp-idf/components/driver/temperature_sensor/include -I/home/joagz/esp/esp-idf/components/driver/touch_sensor/include -I/home/joagz/esp/esp-idf/components/driver/twai/include -I/home/joagz/esp/esp-idf/components/driver/uart/include -I/home/joagz/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/joagz/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/home/joagz/esp/esp-idf/components/esp_pm/include -I/home/joagz/esp/esp-idf/components/esp_ringbuf/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/joagz/taskcar-oficial/taskcar-motor-driver=. -fmacro-prefix-map=/home/joagz/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/imu_driver/CMakeFiles/__idf_imu_driver.dir/mpu6050.c.obj -MF esp-idf/imu_driver/CMakeFiles/__idf_imu_driver.dir/mpu6050.c.obj.d -o esp-idf/imu_driver/CMakeFiles/__idf_imu_driver.dir/mpu6050.c.obj -c /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c
+In file included from /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:1:
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.h:126:24: error: unknown type name 'uint8_t'
+  126 | void mpu6050_configure(uint8_t AFS_SEL, uint8_t GFS_SEL, int8_t DLPF_CFG);
+      |                        ^~~~~~~
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.h:1:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | #ifndef MPU6050_H
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.h:126:41: error: unknown type name 'uint8_t'
+  126 | void mpu6050_configure(uint8_t AFS_SEL, uint8_t GFS_SEL, int8_t DLPF_CFG);
+      |                                         ^~~~~~~
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.h:126:41: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.h:126:58: error: unknown type name 'int8_t'
+  126 | void mpu6050_configure(uint8_t AFS_SEL, uint8_t GFS_SEL, int8_t DLPF_CFG);
+      |                                                          ^~~~~~
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.h:126:58: note: 'int8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+In file included from /home/joagz/esp/esp-idf/components/driver/i2c/include/driver/i2c.h:15,
+                 from /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:3:
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c: In function 'mpu6050_configure':
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:49:13: error: 'I2C_SLAVE_ADDR' undeclared (first use in this function)
+   49 |             I2C_SLAVE_ADDR,
+      |             ^~~~~~~~~~~~~~
+/home/joagz/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:49:13: note: each undeclared identifier is reported only once for each function it appears in
+   49 |             I2C_SLAVE_ADDR,
+      |             ^~~~~~~~~~~~~~
+/home/joagz/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+[180/214] Building C object esp-idf/i2c_imu/CMakeFiles/__idf_i2c_imu.dir/i2c_imu.c.obj
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/i2c_imu/i2c_imu.c:27:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   27 | static const char *TAG = "i2c_imu";
+      |                    ^~~
+[181/214] Linking C static library esp-idf/driver/libdriver.a
+ninja: build stopped: subcommand failed.
