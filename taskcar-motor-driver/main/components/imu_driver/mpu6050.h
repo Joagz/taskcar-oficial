@@ -1,6 +1,8 @@
 #ifndef MPU6050_H
 #define MPU6050_H
 
+#include <stdbool.h>
+
 /* Register Map Definition */
 #define MPU6050_ADDR_SELF_TEST_X           0x0D
 #define MPU6050_ADDR_SELF_TEST_Y           0x0E
@@ -118,6 +120,14 @@
 #define MPU6050_SELF_TEST_YES              0b11100000 
 #define MPU6050_SELF_TEST_NO               0b00000000
 
+#define MPU6050_DLPF_0                     0b00000000
+#define MPU6050_DLPF_1                     0b00000001
+#define MPU6050_DLPF_2                     0b00000010
+#define MPU6050_DLPF_3                     0b00000011
+#define MPU6050_DLPF_4                     0b00000100
+#define MPU6050_DLPF_5                     0b00000101
+#define MPU6050_DLPF_6                     0b00000110
+
 #define MPU6050_TIMEOUT_MS                 16
 
 /** 
@@ -126,6 +136,6 @@
 * @param GFS_SEL 2-bit unsigned value. Selects the full scale range of gyroscopes. (Use MPU6050_GYRO_*G)
 * @param DLPF_CFG 3-bit unsigned value. Configures the DLPF setting (Digital Low Pass Filter)
 */
-void mpu6050_configure(uint8_t AFS_SEL, uint8_t GFS_SEL, int8_t DLPF_CFG);
+void mpu6050_configure(uint8_t AFS_SEL, uint8_t GFS_SEL, int8_t DLPF_CFG, bool who_am_i_switch, bool self_test);
 
 #endif
