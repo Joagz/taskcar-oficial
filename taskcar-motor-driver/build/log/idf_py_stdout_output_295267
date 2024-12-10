@@ -1,0 +1,198 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 10 2024 16:18:42[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v1.0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b598h ( 46488) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001b5c0 vaddr=3ffb0000 size=022b4h (  8884) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d87c vaddr=40080000 size=0279ch ( 10140) load[0m
+[0;32mI (129) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16cdch ( 93404) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00036d04 vaddr=4008279c size=0b388h ( 45960) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) cpu_start: Application information:[0m
+[0;32mI (215) cpu_start: Project name:     taskcar_motor_driver[0m
+[0;32mI (221) cpu_start: App version:      8d19057-dirty[0m
+[0;32mI (226) cpu_start: Compile time:     Dec 10 2024 19:33:58[0m
+[0;32mI (232) cpu_start: ELF file SHA256:  6d1ecaecb...[0m
+[0;32mI (238) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (252) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2BB8 len 0002D448 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008DB24 len 000124DC (73 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;33mW (304) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (317) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (1088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (1188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (1288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (1388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (1488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (1588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (1688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (1788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (1888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (1988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (2088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (2188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (2288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (2388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (2488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (2588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (2688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (2788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (2888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (2988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (3088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (3188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (3288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (3388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (3488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (3588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (3688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (3788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (3888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (3988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (4088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (4188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (4288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (4388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (4488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (4588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (4688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (4788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (4888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (4988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (5088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (5188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (5288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (5388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (5488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (5588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (5688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (5788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (5888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (5988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (6088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (6188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (6288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (6388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (6488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (6588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (6688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (6788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (6888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (6988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (7088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (7188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (7288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (7388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (7488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (7588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (7688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (7788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (7888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (7988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (8088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (8188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (8288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (8388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (8488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (8588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (8688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (8788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (8888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (8988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (9088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (9188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (9288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (9388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (9488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (9588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (9688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (9788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (9888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (9988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (10088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (10188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (10288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (10388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (10488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (10588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (10688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (10788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (10888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (10988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (11088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (11188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (11288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (11388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (11488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (11588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (11688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (11788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (11888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (11988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (12088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (12188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (12288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (12388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (12488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (12588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (12688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (12788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (12888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (12988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (13088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (13188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (13288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (13388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (13488) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (13588) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (13688) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (13788) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (13888) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (13988) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (14088) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (14188) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (14288) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m
+[0;32mI (14388) main: X: -6.453 m/s^2, Y: -0.150 m/s^2, Z: -7.555 m/s^2[0m

@@ -1,0 +1,238 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Dec 10 2024 16:18:42[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v1.0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b5b8h ( 46520) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001b5e0 vaddr=3ffb0000 size=022b4h (  8884) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d89c vaddr=40080000 size=0277ch ( 10108) load[0m
+[0;32mI (129) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16cfch ( 93436) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00036d24 vaddr=4008277c size=0b3a8h ( 45992) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) cpu_start: Application information:[0m
+[0;32mI (215) cpu_start: Project name:     taskcar_motor_driver[0m
+[0;32mI (221) cpu_start: App version:      8d19057-dirty[0m
+[0;32mI (226) cpu_start: Compile time:     Dec 10 2024 19:33:58[0m
+[0;32mI (232) cpu_start: ELF file SHA256:  7b7148c97...[0m
+[0;32mI (238) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (243) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (247) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (252) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2BB8 len 0002D448 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008DB24 len 000124DC (73 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;33mW (304) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (317) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;31mE (338) calibration: step 0[0m
+[0;31mE (338) calibration: step 1[0m
+[0;31mE (338) calibration: step 2[0m
+[0;31mE (338) calibration: step 3[0m
+[0;31mE (348) calibration: step 4[0m
+[0;31mE (348) calibration: step 5[0m
+[0;31mE (348) calibration: step 6[0m
+[0;31mE (358) calibration: step 7[0m
+[0;31mE (358) calibration: step 8[0m
+[0;31mE (358) calibration: step 9[0m
+[0;31mE (368) calibration: step 10[0m
+[0;31mE (368) calibration: step 11[0m
+[0;32mI (378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (1078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (1178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (1278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (1378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (1478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (1578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (1678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (1778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (1878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (1978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (2078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (2178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (2278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (2378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (2478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (2578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (2678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (2778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (2878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (2978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (3078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (3178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (3278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (3378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (3478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (3578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (3678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (3778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (3878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (3978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (4078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (4178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (4278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (4378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (4478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (4578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (4678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (4778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (4878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (4978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (5078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (5178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (5278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (5378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (5478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (5578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (5678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (5778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (5878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (5978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (6078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (6178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (6278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (6378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (6478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (6578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (6678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (6778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (6878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (6978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (7078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (7178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (7278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (7378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (7478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (7578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (7678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (7778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (7878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (7978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (8078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (8178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (8278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (8378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (8478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (8578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (8678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (8778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (8878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (8978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (9078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (9178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (9278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (9378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (9478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (9578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (9678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (9778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (9878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (9978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (10078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (10178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (10278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (10378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (10478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (10578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (10678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (10778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (10878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (10978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (11078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (11178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (11278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (11378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (11478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (11578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (11678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (11778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (11878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (11978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (12078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (12178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (12278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (12378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (12478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (12578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (12678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (12778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (12878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (12978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (13078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (13178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (13278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (13378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (13478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (13578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (13678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (13778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (13878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (13978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (14078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (14178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (14278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (14378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (14478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (14578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (14678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (14778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (14878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (14978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (15078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (15178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (15278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (15378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (15478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (15578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (15678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (15778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (15878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (15978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (16078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (16178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (16278) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (16378) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (16478) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (16578) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (16678) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (16778) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (16878) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (16978) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (17078) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m
+[0;32mI (17178) main: X: 0.000 m/s^2, Y: 0.000 m/s^2, Z: 0.000 m/s^2[0m

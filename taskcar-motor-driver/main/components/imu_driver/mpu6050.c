@@ -91,6 +91,35 @@ int get_DLPF(int8_t DLPF)
     return DLPF;
 }
 
+mpu6050_t mpu6050_new(uint8_t AFS_SEL,
+                      uint8_t GFS_SEL,
+                      uint8_t DLPF_CFG,
+                      uint8_t ADDRESS)
+{
+    return (mpu6050_t){
+        .ADDRESS = ADDRESS,
+        .AFS_SEL = AFS_SEL,
+        .GFS_SEL = GFS_SEL,
+        .DLPF_CFG = DLPF_CFG,
+
+        .x_acc = 0.0f,
+        .y_acc = 0.0f,
+        .z_acc = 0.0f,
+
+        .x_deg = 0.0f,
+        .y_deg = 0.0f,
+        .z_deg = 0.0f,
+
+        .x_acc_offset = 0.0f,
+        .y_acc_offset = 0.0f,
+        .z_acc_offset = 0.0f,
+        .x_deg_offset = 0.0f,
+        .y_deg_offset = 0.0f,
+        .z_deg_offset = 0.0f,
+
+        .temp = 0};
+}
+
 esp_err_t mpu6050_configure(mpu6050_t *mpu6050)
 {
     if (mpu6050 == NULL)
@@ -184,16 +213,16 @@ esp_err_t mpu6050_accelgyro_data(mpu6050_t *mpu6050)
 
 esp_err_t mpu6050_calibrate(mpu6050_t *mpu6050)
 {
-    float xaavg, yaavg, zaavg;
-    float xgavg, ygavg, zgavg;
+    float xaavg = 0, yaavg = 0, zaavg = 0;
+    float xgavg = 0, ygavg = 0, zgavg = 0;
 
     int passes = 100;
 
     for (int i = 0; i < passes; i++)
     {
         if (mpu6050_accelgyro_data(mpu6050) != ESP_OK)
-            return ESP_FAIL;
-            
+            continue;
+
         xaavg += mpu6050->x_acc;
         xgavg += mpu6050->x_deg;
 
