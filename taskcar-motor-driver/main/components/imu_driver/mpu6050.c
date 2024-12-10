@@ -17,24 +17,23 @@ static esp_err_t set_i2c(void)
     return ESP_OK;
 }
 
-void write_i2c(uint8_t data[2], uint8_t address)
+esp_err_t write_i2c(uint8_t data[2], uint8_t address)
 {
     if (data == NULL)
-        return;
+        return ESP_FAIL;
 
     if (address == 0x00)
-        return;
+        return ESP_FAIL;
 
-    ESP_ERROR_CHECK(
-        i2c_master_write_to_device(
-            I2C_NUM_0,
-            address,
-            data,
-            2,
-            pdMS_TO_TICKS(MPU6050_TIMEOUT_MS)));
+    return i2c_master_write_to_device(
+        I2C_NUM_0,
+        address,
+        data,
+        2,
+        pdMS_TO_TICKS(MPU6050_TIMEOUT_MS));
 }
 
-int get_AFS_SEL(uint8_t FS_SEL, uint8_t SELF_TEST_MODE)
+int get_AFS_SEL(int FS_SEL, int SELF_TEST_MODE)
 {
     if (SELF_TEST_MODE != 0b111 || SELF_TEST_MODE != 0b000)
         SELF_TEST_MODE = 0;
@@ -58,7 +57,7 @@ int get_AFS_SEL(uint8_t FS_SEL, uint8_t SELF_TEST_MODE)
     }
 }
 
-int get_GFS_SEL(uint8_t FS_SEL, uint8_t SELF_TEST_MODE)
+int get_GFS_SEL(int FS_SEL, int SELF_TEST_MODE)
 {
     if (SELF_TEST_MODE != 0b111 || SELF_TEST_MODE != 0b000)
         SELF_TEST_MODE = 0;
@@ -92,47 +91,59 @@ int get_DLPF(int8_t DLPF)
     return DLPF;
 }
 
-void mpu6050_configure(uint8_t AFS_SEL, uint8_t GFS_SEL, int8_t DLPF_CFG, bool who_am_i_switch)
+esp_err_t mpu6050_configure(mpu6050_t *mpu6050)
 {
+    if (mpu6050 == NULL)
+        return ESP_ERR_INVALID_ARG;
+
     ESP_ERROR_CHECK(set_i2c());
 
     uint8_t data[2] = {0};
-    uint8_t device_addr = MPU6050_SLAVE_ADDR_1;
-    uint8_t dlpf_cfg = get_DLPF(DLPF_CFG);
 
-    if (who_am_i_switch)
-    {
-        device_addr = MPU6050_SLAVE_ADDR_2;
-    }
+    esp_err_t err = ESP_OK;
 
     // Wake up the MPU6050 (default is sleep mode)
     data[0] = MPU6050_ADDR_PWR_MGMT_1;
     data[1] = 0x00;
 
-    write_i2c(data, device_addr);
+    if ((err = write_i2c(data, mpu6050->ADDRESS)) != ESP_OK)
+    {
+        return err;
+    }
 
     // Configure DLPF setting for gyroscope and accelerometers
     data[0] = MPU6050_ADDR_CONFIG;
-    data[1] = dlpf_cfg;
+    data[1] = mpu6050->DLPF_CFG;
 
-    write_i2c(data, device_addr);
+    if ((err = write_i2c(data, mpu6050->ADDRESS)) != ESP_OK)
+    {
+        return err;
+    }
 
     // Configure acceleration
     data[0] = MPU6050_ADDR_ACCEL_CONFIG;
-    data[1] = get_AFS_SEL(AFS_SEL, 0);
+    data[1] = get_AFS_SEL(mpu6050->AFS_SEL, 0);
 
-    write_i2c(data, device_addr);
+    if ((err = write_i2c(data, mpu6050->ADDRESS)) != ESP_OK)
+    {
+        return err;
+    }
 
     // Configure gyroscope
     data[0] = MPU6050_ADDR_GYRO_CONFIG;
-    data[1] = get_GFS_SEL(GFS_SEL, 0);
+    data[1] = get_GFS_SEL(mpu6050->GFS_SEL, 0);
 
-    write_i2c(data, device_addr);
+    if ((err = write_i2c(data, mpu6050->ADDRESS)) != ESP_OK)
+    {
+        return err;
+    }
+
+    return ESP_OK;
 }
 
-esp_err_t mpu6050_accelgyro_data(float *a, float *g, uint8_t AFS_SEL, uint8_t GFS_SEL)
+esp_err_t mpu6050_accelgyro_data(mpu6050_t *mpu6050)
 {
-    if (a == NULL || g == NULL)
+    if (mpu6050 == NULL)
     {
         return ESP_ERR_INVALID_ARG;
     }
@@ -154,19 +165,58 @@ esp_err_t mpu6050_accelgyro_data(float *a, float *g, uint8_t AFS_SEL, uint8_t GF
         int16_t yGyro = (rx_data[10] << 8) | rx_data[11];
         int16_t zGyro = (rx_data[12] << 8) | rx_data[13];
 
-        float accScaleFactor = (float)(AFS_SEL) / 32768.0;
-        float gyroScaleFactor = (float)(GFS_SEL) / 32768.0;
+        float accScaleFactor = (float)(mpu6050->AFS_SEL) / 32768.0;
+        float gyroScaleFactor = (float)(mpu6050->GFS_SEL) / 32768.0;
 
-        a[0] = xAcc * accScaleFactor * 9.8;
-        a[1] = yAcc * accScaleFactor * 9.8;
-        a[2] = zAcc * accScaleFactor * 9.8;
+        mpu6050->x_acc = xAcc * accScaleFactor * 9.8 - mpu6050->x_acc_offset;
+        mpu6050->y_acc = yAcc * accScaleFactor * 9.8 - mpu6050->y_acc_offset;
+        mpu6050->z_acc = zAcc * accScaleFactor * 9.8 - mpu6050->z_acc_offset;
 
-        g[0] = xGyro * gyroScaleFactor;
-        g[1] = yGyro * gyroScaleFactor;
-        g[2] = zGyro * gyroScaleFactor;
+        mpu6050->x_deg = xGyro * gyroScaleFactor - mpu6050->x_deg_offset;
+        mpu6050->y_deg = yGyro * gyroScaleFactor - mpu6050->y_deg_offset;
+        mpu6050->z_deg = zGyro * gyroScaleFactor - mpu6050->z_deg_offset;
 
         return ESP_OK;
     }
 
     return ESP_FAIL;
+}
+
+esp_err_t mpu6050_calibrate(mpu6050_t *mpu6050)
+{
+    float xaavg, yaavg, zaavg;
+    float xgavg, ygavg, zgavg;
+
+    int passes = 100;
+
+    for (int i = 0; i < passes; i++)
+    {
+        if (mpu6050_accelgyro_data(mpu6050) != ESP_OK)
+            return ESP_FAIL;
+            
+        xaavg += mpu6050->x_acc;
+        xgavg += mpu6050->x_deg;
+
+        yaavg += mpu6050->y_acc;
+        ygavg += mpu6050->y_deg;
+
+        zaavg += mpu6050->z_acc;
+        zgavg += mpu6050->z_deg;
+    }
+
+    xaavg = xaavg / passes;
+    yaavg = yaavg / passes;
+    zaavg = zaavg / passes;
+    xgavg = xgavg / passes;
+    ygavg = ygavg / passes;
+    zgavg = zgavg / passes;
+
+    mpu6050->x_acc_offset = xaavg;
+    mpu6050->y_acc_offset = yaavg;
+    mpu6050->z_acc_offset = zaavg;
+    mpu6050->x_deg_offset = xgavg;
+    mpu6050->y_deg_offset = ygavg;
+    mpu6050->z_deg_offset = zgavg;
+
+    return ESP_OK;
 }

@@ -64,4 +64,3 @@
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/motor_driver/libmotor_driver.a
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/imu_driver/libimu_driver.a
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/main/libmain.a
-/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/i2c_imu/libi2c_imu.a

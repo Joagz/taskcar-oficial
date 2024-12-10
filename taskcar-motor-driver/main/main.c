@@ -24,7 +24,14 @@ void app_main(void)
 		esp_restart();
 	}
 
-	mpu6050_configure(MPU6050_ACCEL_2G, MPU6050_GYRO_250, MPU6050_DLPF_3, false);
+	mpu6050_t mpu6050 = {
+		.ADDRESS=MPU6050_SLAVE_ADDR_1,
+		.AFS_SEL=MPU6050_ACCEL_2G,
+		.GFS_SEL=MPU6050_GYRO_250,
+		.DLPF_CFG=MPU6050_DLPF_6,
+	};
+
+	mpu6050_configure(&mpu6050);
 
 	float accelValues[3];
 	float gyroValues[3];
