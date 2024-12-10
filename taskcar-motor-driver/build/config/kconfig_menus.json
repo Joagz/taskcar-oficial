@@ -4809,6 +4809,24 @@
     {
         "children": [
             {
+                "children": [],
+                "depends_on": null,
+                "help": "Direcci\u00f3n del registro del MPU6050 para env\u00edo de datos por I2C",
+                "id": "CONFIG_MPU6050_SLAVE_ADDR",
+                "name": "CONFIG_MPU6050_SLAVE_ADDR",
+                "range": null,
+                "title": "DIRECCI\u00d3N DEL REGISTRO WHO_AM_I",
+                "type": "int"
+            }
+        ],
+        "depends_on": null,
+        "id": "mpu6050",
+        "title": "MPU6050",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [
                     {
                         "children": [],

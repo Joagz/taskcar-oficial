@@ -1,0 +1,38 @@
+[1/20] Linking C static library esp-idf/nvs_sec_provider/libnvs_sec_provider.a
+[2/20] Linking C static library esp-idf/perfmon/libperfmon.a
+[3/20] Linking C static library esp-idf/mqtt/libmqtt.a
+[4/20] Linking C static library esp-idf/i2c_imu/libi2c_imu.a
+[5/20] Linking C static library esp-idf/fatfs/libfatfs.a
+[6/20] Linking C static library esp-idf/protocomm/libprotocomm.a
+[7/20] Linking C static library esp-idf/spiffs/libspiffs.a
+[8/20] Linking C static library esp-idf/esp_local_ctrl/libesp_local_ctrl.a
+[9/20] Linking C static library esp-idf/wifi_provisioning/libwifi_provisioning.a
+[10/20] Building C object esp-idf/imu_driver/CMakeFiles/__idf_imu_driver.dir/mpu6050.c.obj
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c: In function 'get_GFS_SEL':
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:71:5: warning: case label value exceeds maximum value for type [-Wswitch-outside-range]
+   71 |     case MPU6050_GYRO_500:
+      |     ^~~~
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:74:5: warning: case label value exceeds maximum value for type [-Wswitch-outside-range]
+   74 |     case MPU6050_GYRO_1000:
+      |     ^~~~
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:77:5: warning: case label value exceeds maximum value for type [-Wswitch-outside-range]
+   77 |     case MPU6050_GYRO_2000:
+      |     ^~~~
+[11/20] Performing build step for 'bootloader'
+[1/1] cd /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/esp-idf/esptool_py && /home/joagz/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/joagz/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[12/20] Linking C static library esp-idf/imu_driver/libimu_driver.a
+[13/20] No install step for 'bootloader'
+[14/20] Linking C static library esp-idf/main/libmain.a
+[15/20] Completed 'bootloader'
+[16/20] Generating ld/sections.ld
+[17/20] Building C object CMakeFiles/taskcar_motor_driver.elf.dir/project_elf_src_esp32.c.obj
+[18/20] Linking CXX executable taskcar_motor_driver.elf
+[19/20] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/joagz/taskcar-oficial/taskcar-motor-driver/build/taskcar_motor_driver.bin
+[20/20] cd /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/esptool_py && /home/joagz/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/joagz/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/joagz/taskcar-oficial/taskcar-motor-driver/build/partition_table/partition-table.bin /home/joagz/taskcar-oficial/taskcar-motor-driver/build/taskcar_motor_driver.bin
+taskcar_motor_driver.bin binary size 0x31ff0 bytes. Smallest app partition is 0x100000 bytes. 0xce010 bytes (80%) free.

@@ -419,12 +419,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/i2c_imu/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/espressif__mpu6050/cmake_install.cmake")
+  include("/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/imu_driver/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -434,6 +429,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/imu_driver/cmake_install.cmake")
+  include("/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/i2c_imu/cmake_install.cmake")
 endif()
 

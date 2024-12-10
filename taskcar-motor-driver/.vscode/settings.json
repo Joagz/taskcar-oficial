@@ -12,7 +12,9 @@
         "gpio_num.h": "c",
         "esp_err.h": "c",
         "i2c.h": "c",
-        "i2c_master.h": "c"
+        "i2c_master.h": "c",
+        "mpu6050.h": "c",
+        "assert.h": "c"
     },
     "idf.adapterTargetName": "esp32",
     "idf.openOcdConfigs": [

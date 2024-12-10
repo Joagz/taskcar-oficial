@@ -51,7 +51,7 @@ endmenu
 menu "MPU6050"
     config CONFIG_MPU6050_SLAVE_ADDR
         int "DIRECCIÓN DEL REGISTRO WHO_AM_I"
-        default 0x68
+        default 104
         help
             Dirección del registro del MPU6050 para envío de datos por I2C
 endmenu

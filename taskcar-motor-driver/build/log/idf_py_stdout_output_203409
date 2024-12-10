@@ -1,0 +1,31 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/esp-idf/esptool_py && /home/joagz/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/joagz/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Building C object esp-idf/imu_driver/CMakeFiles/__idf_imu_driver.dir/mpu6050.c.obj
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c: In function 'get_GFS_SEL':
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:71:5: warning: case label value exceeds maximum value for type [-Wswitch-outside-range]
+   71 |     case MPU6050_GYRO_500:
+      |     ^~~~
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:74:5: warning: case label value exceeds maximum value for type [-Wswitch-outside-range]
+   74 |     case MPU6050_GYRO_1000:
+      |     ^~~~
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:77:5: warning: case label value exceeds maximum value for type [-Wswitch-outside-range]
+   77 |     case MPU6050_GYRO_2000:
+      |     ^~~~
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c: In function 'mpu6050_configure':
+/home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:101:13: warning: unused variable 'dlpf_cfg' [-Wunused-variable]
+  101 |     uint8_t dlpf_cfg = get_DLPF(DLPF_CFG);
+      |             ^~~~~~~~
+[4/9] Linking C static library esp-idf/imu_driver/libimu_driver.a
+[5/9] Completed 'bootloader'
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable taskcar_motor_driver.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/joagz/taskcar-oficial/taskcar-motor-driver/build/taskcar_motor_driver.bin
+[9/9] cd /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/esptool_py && /home/joagz/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/joagz/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/joagz/taskcar-oficial/taskcar-motor-driver/build/partition_table/partition-table.bin /home/joagz/taskcar-oficial/taskcar-motor-driver/build/taskcar_motor_driver.bin
+taskcar_motor_driver.bin binary size 0x31f10 bytes. Smallest app partition is 0x100000 bytes. 0xce0f0 bytes (80%) free.

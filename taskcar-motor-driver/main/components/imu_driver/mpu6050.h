@@ -1,7 +1,16 @@
+/**
+ * @author Joaquín Góme
+ * @details MPU6050 driver for ESPRESSIF SDK ESP32
+ */
+
 #ifndef MPU6050_H
 #define MPU6050_H
 
 #include <stdbool.h>
+#include "driver/i2c.h"
+#include "esp_log.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
 /* Register Map Definition */
 #define MPU6050_ADDR_SELF_TEST_X           0x0D
@@ -129,13 +138,24 @@
 #define MPU6050_DLPF_6                     0b00000110
 
 #define MPU6050_TIMEOUT_MS                 16
+#define MPU6050_DATA_BUFFER_SIZE           14
 
 /** 
 * @brief Configure MPU6050's registers and set I2C default configuration 
 * @param AFS_SEL 2-bit unsigned value. Selects the full scale range of accelerometers. (Use MPU6050_ACCEL_*G)
 * @param GFS_SEL 2-bit unsigned value. Selects the full scale range of gyroscopes. (Use MPU6050_GYRO_*G)
 * @param DLPF_CFG 3-bit unsigned value. Configures the DLPF setting (Digital Low Pass Filter)
+* @param who_am_i_switch switches the who_am_i register from 0x68 to 0x69
 */
-void mpu6050_configure(uint8_t AFS_SEL, uint8_t GFS_SEL, int8_t DLPF_CFG, bool who_am_i_switch, bool self_test);
+void mpu6050_configure(uint8_t AFS_SEL, uint8_t GFS_SEL, int8_t DLPF_CFG, bool who_am_i_switch);
+
+/** 
+* @brief Get accelerometer and gyroscope data 
+* @param a[3] accelerometer buffer
+* @param g[3] accelerometer buffer
+* @param AFS_SEL 2-bit unsigned value. Selects the full scale range of accelerometers. (Use MPU6050_ACCEL_*G)
+* @param GFS_SEL 2-bit unsigned value. Selects the full scale range of gyroscopes. (Use MPU6050_GYRO_*G)
+*/
+esp_err_t mpu6050_accelgyro_data(float *a, float *g, uint8_t AFS_SEL, uint8_t GFS_SEL);
 
 #endif
