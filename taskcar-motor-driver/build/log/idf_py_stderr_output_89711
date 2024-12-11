@@ -1,0 +1,1221 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+0x400830b0: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m--- 0x4008798e: _frxt_int_enter at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:140
+[0m
+[0;33m--- 0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m--- 0x400d234b: uart_hal_write_txfifo at /home/joagz/esp/esp-idf/components/hal/uart_hal_iram.c:27
+0x400837e6: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:546
+[0m
+[0;33m--- 0x400837e3: i2c_isr_handler_default at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:545
+0x400830ad: _xt_lowint1 at /home/joagz/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x40087906: vPortClearInterruptMaskFromISR at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x400d7214: i2c_hw_disable at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:260
+0x400d7dc9: i2c_hw_fsm_reset at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:677
+0x400d8384: i2c_master_cmd_begin at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1598
+0x400d84cb: i2c_master_write_read_device at /home/joagz/esp/esp-idf/components/driver/i2c/i2c.c:1103
+0x400d58b4: mpu6050_accelgyro_data at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:183
+0x400d5a87: mpu6050_calibrate at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/components/imu_driver/mpu6050.c:229
+0x400d5630: app_main at /home/joagz/taskcar-oficial/taskcar-motor-driver/main/main.c:34
+0x400e645c: main_task at /home/joagz/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40084c3a: esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m--- 0x40084990: ipc_task at /home/joagz/esp/esp-idf/components/esp_system/esp_ipc.c:52
+[0m
+[0;33m--- 0x40084c37: xt_utils_wait_for_intr at /home/joagz/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /home/joagz/esp/esp-idf/components/esp_hw_support/cpu.c:132
+0x400d21df: esp_vApplicationIdleHook at /home/joagz/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+0x40088356: prvIdleTask at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4307 (discriminator 1)
+0x40087555: vPortTaskWrapper at /home/joagz/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

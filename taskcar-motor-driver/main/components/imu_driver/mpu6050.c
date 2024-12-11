@@ -1,4 +1,5 @@
 #include "mpu6050.h"
+#include <math.h>
 
 static esp_err_t set_i2c(void)
 {
@@ -225,10 +226,8 @@ esp_err_t mpu6050_calibrate(mpu6050_t *mpu6050)
 
         xaavg += mpu6050->x_acc;
         xgavg += mpu6050->x_deg;
-
         yaavg += mpu6050->y_acc;
         ygavg += mpu6050->y_deg;
-
         zaavg += mpu6050->z_acc;
         zgavg += mpu6050->z_deg;
     }
@@ -246,6 +245,77 @@ esp_err_t mpu6050_calibrate(mpu6050_t *mpu6050)
     mpu6050->x_deg_offset = xgavg;
     mpu6050->y_deg_offset = ygavg;
     mpu6050->z_deg_offset = zgavg;
+
+    return ESP_OK;
+}
+
+esp_err_t mpu6050_stddev(mpu6050_t *mpu6050) {
+    if (mpu6050 == NULL) {
+        ESP_LOGE("stats", "Invalid MPU6050 pointer");
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    float xaavg = 0, yaavg = 0, zaavg = 0;
+    float xgavg = 0, ygavg = 0, zgavg = 0;
+
+    float xastddev = 0, yastddev = 0, zastddev = 0;
+    float xgstddev = 0, ygstddev = 0, zgstddev = 0;
+
+    int passes = 50, successful_passes = 0;
+
+    // First loop: calculate averages
+    for (int i = 0; i < passes; i++) {
+        if (mpu6050_accelgyro_data(mpu6050) != ESP_OK)
+            continue;
+
+        xaavg += mpu6050->x_acc;
+        xgavg += mpu6050->x_deg;
+        yaavg += mpu6050->y_acc;
+        ygavg += mpu6050->y_deg;
+        zaavg += mpu6050->z_acc;
+        zgavg += mpu6050->z_deg;
+        successful_passes++;
+    }
+
+    if (successful_passes == 0) {
+        ESP_LOGE("stats", "No successful readings from MPU6050");
+        return ESP_FAIL;
+    }
+
+    xaavg /= (float)(successful_passes);
+    xgavg /= (float)(successful_passes);
+    yaavg /= (float)(successful_passes);
+    ygavg /= (float)(successful_passes);
+    zaavg /= (float)(successful_passes);
+    zgavg /= (float)(successful_passes);
+
+    // Second loop: calculate standard deviation
+    for (int i = 0; i < passes; i++) {
+        if (mpu6050_accelgyro_data(mpu6050) != ESP_OK)
+            continue;
+
+        xastddev += powf(mpu6050->x_acc - xaavg, 2);
+        xgstddev += powf(mpu6050->x_deg - xgavg, 2);
+        yastddev += powf(mpu6050->y_acc - yaavg, 2);
+        ygstddev += powf(mpu6050->y_deg - ygavg, 2);
+        zastddev += powf(mpu6050->z_acc - zaavg, 2);
+        zgstddev += powf(mpu6050->z_deg - zgavg, 2);
+    }
+
+    xastddev = sqrtf(xastddev / (float)(successful_passes));
+    xgstddev = sqrtf(xgstddev / (float)(successful_passes));
+    yastddev = sqrtf(yastddev / (float)(successful_passes));
+    ygstddev = sqrtf(ygstddev / (float)(successful_passes));
+    zastddev = sqrtf(zastddev / (float)(successful_passes));
+    zgstddev = sqrtf(zgstddev / (float)(successful_passes));
+
+    ESP_LOGI("standard deviation",
+             "\nxastddev: %.4f\nyastddev: %.4f\nzastddev: %.4f\nxgstddev: %.4f\nygstddev: %.4f\nzgstddev: %.4f",
+             xastddev, yastddev, zastddev, xgstddev, ygstddev, zgstddev);
+
+    ESP_LOGI("median",
+             "\nxaavg: %.4f\nyaavg: %.4f\nzaavg: %.4f\nxgavg: %.4f\nygavg: %.4f\nzgavg: %.4f",
+             xaavg, yaavg, zaavg, xgavg, ygavg, zgavg);
 
     return ESP_OK;
 }

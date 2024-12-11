@@ -27,21 +27,22 @@ void app_main(void)
 	mpu6050_t mpu6050 = mpu6050_new(
 		MPU6050_ACCEL_2G,
 		MPU6050_GYRO_250,
-		MPU6050_DLPF_6,
+		MPU6050_DLPF_0,
 		MPU6050_SLAVE_ADDR_1);
 
 	mpu6050_configure(&mpu6050);
 	mpu6050_calibrate(&mpu6050);
+	mpu6050_stddev(&mpu6050);
 
-	while (true)
-	{
-		mpu6050_accelgyro_data(&mpu6050);
+	// while (true)
+	// {
+	// 	mpu6050_accelgyro_data(&mpu6050);
+		
+	// 	// ESP_LOGI("main", "X: %.3f m/s^2, Y: %.3f m/s^2, Z: %.3f m/s^2",
+	// 	// 		 mpu6050.x_acc, mpu6050.y_acc, mpu6050.z_acc);
+	// 	// ESP_LOGI("main", "X: %.3f deg, Y: %.3f deg, Z: %.3f deg",
+	// 	// 		 gyroValues[0], gyroValues[1], gyroValues[2]);
 
-		ESP_LOGI("main", "X: %.3f m/s^2, Y: %.3f m/s^2, Z: %.3f m/s^2",
-				 mpu6050.x_acc + mpu6050.x_acc_offset, mpu6050.y_acc + mpu6050.y_acc_offset, mpu6050.z_acc + mpu6050.z_acc_offset);
-		// ESP_LOGI("main", "X: %.3f deg, Y: %.3f deg, Z: %.3f deg",
-		// 		 gyroValues[0], gyroValues[1], gyroValues[2]);
-
-		vTaskDelay(pdTICKS_TO_MS(1));
-	}
+	// 	vTaskDelay(pdTICKS_TO_MS(2));
+	// }
 }

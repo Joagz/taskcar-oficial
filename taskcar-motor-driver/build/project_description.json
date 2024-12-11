@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "taskcar_motor_driver",
-    "project_version":    "8d19057-dirty",
+    "project_version":    "a4d28bd-dirty",
     "project_path":       "/home/joagz/taskcar-oficial/taskcar-motor-driver",
     "idf_path":           "/home/joagz/esp/esp-idf",
     "build_dir":          "/home/joagz/taskcar-oficial/taskcar-motor-driver/build",
