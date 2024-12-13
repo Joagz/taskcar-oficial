@@ -5,7 +5,9 @@ idf_component_register(
                     "."
                     "components/motor_driver"
                     "components/imu_driver"
+                    "components/wifi_station"
                     REQUIRES
                     motor_driver
                     imu_driver
-                    driver)
+                    driver
+                    wifi_station)

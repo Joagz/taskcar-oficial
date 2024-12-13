@@ -649,6 +649,13 @@
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/imu_driver/CMakeFiles/install.dir
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/imu_driver/CMakeFiles/install/local.dir
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/imu_driver/CMakeFiles/install/strip.dir
+/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/wifi_station/CMakeFiles/__idf_wifi_station.dir
+/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/wifi_station/CMakeFiles/edit_cache.dir
+/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/wifi_station/CMakeFiles/rebuild_cache.dir
+/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/wifi_station/CMakeFiles/list_install_components.dir
+/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/wifi_station/CMakeFiles/install.dir
+/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/wifi_station/CMakeFiles/install/local.dir
+/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/wifi_station/CMakeFiles/install/strip.dir
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

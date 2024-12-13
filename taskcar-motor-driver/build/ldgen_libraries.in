@@ -63,4 +63,5 @@ $<TARGET_FILE:__idf_spiffs>
 $<TARGET_FILE:__idf_wifi_provisioning>
 $<TARGET_FILE:__idf_motor_driver>
 $<TARGET_FILE:__idf_imu_driver>
+$<TARGET_FILE:__idf_wifi_station>
 $<TARGET_FILE:__idf_main>

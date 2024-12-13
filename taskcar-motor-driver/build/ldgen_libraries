@@ -63,4 +63,5 @@
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/motor_driver/libmotor_driver.a
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/imu_driver/libimu_driver.a
+/home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/wifi_station/libwifi_station.a
 /home/joagz/taskcar-oficial/taskcar-motor-driver/build/esp-idf/main/libmain.a

@@ -7,11 +7,11 @@
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "math.h"
 #include "sdkconfig.h"
 
 #include "motor_driver.h"
 #include "mpu6050.h"
-
 #include <stdio.h>
 
 void app_main(void)
@@ -31,18 +31,23 @@ void app_main(void)
 		MPU6050_SLAVE_ADDR_1);
 
 	mpu6050_configure(&mpu6050);
-	mpu6050_calibrate(&mpu6050);
-	mpu6050_stddev(&mpu6050);
+	// mpu6050_calibrate(&mpu6050);
+	// mpu6050_stddev(&mpu6050, 100);
 
-	// while (true)
-	// {
-	// 	mpu6050_accelgyro_data(&mpu6050);
-		
-	// 	// ESP_LOGI("main", "X: %.3f m/s^2, Y: %.3f m/s^2, Z: %.3f m/s^2",
-	// 	// 		 mpu6050.x_acc, mpu6050.y_acc, mpu6050.z_acc);
-	// 	// ESP_LOGI("main", "X: %.3f deg, Y: %.3f deg, Z: %.3f deg",
-	// 	// 		 gyroValues[0], gyroValues[1], gyroValues[2]);
+	while (1)
+	{
+		mpu6050_accelgyro_data(&mpu6050);
 
-	// 	vTaskDelay(pdTICKS_TO_MS(2));
-	// }
+		ESP_LOGI("m/s^2", "X: %.1f \t %d, Y: %.1f \t %d, Z: %.1f \t %d",
+				 (mpu6050.x_acc), mpu6050.x_acc_frw,
+				 (mpu6050.y_acc), mpu6050.y_acc_frw,
+				 (mpu6050.z_acc), mpu6050.z_acc_frw);
+
+		ESP_LOGI("deg/sec", "X: %.1f \t %d, Y: %.1f \t %d, Z: %.1f \t %d",
+				 (mpu6050.x_deg), mpu6050.x_deg_clkw,
+				 (mpu6050.y_deg), mpu6050.y_deg_clkw,
+				 (mpu6050.z_deg), mpu6050.z_deg_clkw);
+
+		vTaskDelay(pdTICKS_TO_MS(1));
+	}
 }
