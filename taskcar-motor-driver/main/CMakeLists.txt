@@ -11,3 +11,4 @@ idf_component_register(
                     imu_driver
                     driver
                     wifi_station)
+                    
