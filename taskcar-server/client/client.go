@@ -6,7 +6,6 @@ import (
 	"net"
 	"strings"
 	"taskcar/data"
-	"time"
 )
 
 type ClientData struct {
@@ -53,7 +52,6 @@ func Write(conn *net.TCPConn, data []byte) error {
 		return errors.New("could not write to server")
 	}
 
-	time.Sleep(50 * time.Nanosecond)
 	return nil
 }
 

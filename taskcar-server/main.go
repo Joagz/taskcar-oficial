@@ -49,7 +49,7 @@ func callback(obj data.Serializable) {
 }
 
 func main() {
-	messages = stack.New(10)
+	messages = stack.New(15)
 	handler := data.NewHandler("example", callback, DataType{})
 	server.RegisterNewHandler(handler)
 	srv := server.NewServerData("localhost", 5000, "", "")
@@ -83,10 +83,22 @@ func main() {
 	}
 
 	bytes, _ := data.Serialize()
+	buffer := make([]byte, 512)
 
-	for i := 0; i < 10; i++ {
-		client.Write(conn, bytes)
+	for bytes_written, i := 0, 0; bytes_written < 512; bytes_written++ {
+		if i == len(bytes) {
+			i = 0
+		}
+
+		if 512-bytes_written < len(bytes) {
+			break
+		}
+
+		buffer[bytes_written] = bytes[i]
+		i++
 	}
+
+	client.Write(conn, buffer)
 
 	time.Sleep(1 * time.Second)
 

@@ -46,12 +46,14 @@ func (s *Stack) Pull() *any {
 	}
 
 	val := s.tail
-	val.next = nil
 
-	s.tail.next.next = nil
+	if s.tail.next != nil {
+		val.next.prev = nil
+	}
+
 	s.tail = s.tail.next
-
 	s.length--
+
 	return val.Cur
 
 }
@@ -76,11 +78,9 @@ func (s *Stack) Pop() *any {
 
 	if s.head.prev != nil {
 		val.prev.next = nil
-
 	}
 
 	s.head = s.head.prev
-
 	s.length--
 
 	return val.Cur
