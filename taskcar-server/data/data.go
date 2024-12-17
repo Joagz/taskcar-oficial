@@ -1,10 +1,10 @@
 package data
 
-type HandlerCallback func(any)
+type HandlerCallback func(Serializable)
 
 type Serializable interface {
-	Serialize(any) ([]byte, error)
-	Deserialize([]byte) (any, error)
+	Serialize() ([]byte, error)
+	Deserialize([]byte) (Serializable, error)
 }
 
 type HandlerData struct {
@@ -13,9 +13,14 @@ type HandlerData struct {
 	Serializable
 }
 
-func NewHandler(topic string, handler HandlerCallback) HandlerData {
+func Encrypt(s string) string {
+	return s
+}
+
+func NewHandler(topic string, handler HandlerCallback, serializable Serializable) HandlerData {
 	return HandlerData{
-		Topic:    topic,
-		Callback: handler,
+		Topic:        topic,
+		Callback:     handler,
+		Serializable: serializable,
 	}
 }

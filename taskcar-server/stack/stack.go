@@ -1,7 +1,7 @@
 package stack
 
 type Item struct {
-	cur  *any
+	Cur  *any
 	next *Item
 	prev *Item
 }
@@ -42,7 +42,7 @@ func (s *Stack) Pull() *any {
 		val := s.head
 		s.head = nil
 		s.length--
-		return val.cur
+		return val.Cur
 	}
 
 	val := s.tail
@@ -52,7 +52,7 @@ func (s *Stack) Pull() *any {
 	s.tail = s.tail.next
 
 	s.length--
-	return val.cur
+	return val.Cur
 
 }
 
@@ -69,18 +69,21 @@ func (s *Stack) Pop() *any {
 		val := s.tail
 		s.tail = nil
 		s.length--
-		return val.cur
+		return val.Cur
 	}
 
 	val := s.head
-	val.prev = nil
 
-	s.head.prev.next = nil
+	if s.head.prev != nil {
+		val.prev.next = nil
+
+	}
+
 	s.head = s.head.prev
 
 	s.length--
 
-	return val.cur
+	return val.Cur
 }
 
 /*
@@ -95,7 +98,7 @@ func (s *Stack) Push(item *any) {
 	wrapped := Item{
 		next: nil,
 		prev: nil,
-		cur:  item,
+		Cur:  item,
 	}
 
 	if s.tail == nil {
