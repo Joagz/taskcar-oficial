@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net"
 	"strings"
+	"taskcar/config"
 	"taskcar/data"
 )
 
@@ -12,6 +13,8 @@ type ClientData struct {
 	root_user     string
 	root_password string
 	Topic         string
+	Connected     bool
+	Network       *net.TCPConn
 }
 
 func NewClientData(root_user, root_password, topic string) ClientData {
@@ -44,6 +47,25 @@ func (ClientData) Deserialize(data []byte) (data.Serializable, error) {
 	return clientData, nil
 }
 
+func (cli ClientData) SendPacket(toWrite data.Serializable) {
+	bytes, _ := toWrite.Serialize()
+
+	totalToWrite := len(bytes)
+	totalWritten := 0
+
+	for totalWritten < totalToWrite {
+		written, err := cli.Network.Write(bytes[totalWritten:(totalWritten + config.SERVER_PACKET_SIZE_BYTES)])
+		totalWritten += written
+
+		if err != nil {
+			fmt.Println("error writing")
+			return
+		}
+
+	}
+
+}
+
 func Write(conn *net.TCPConn, data []byte) error {
 	bytes, err := conn.Write(data)
 
@@ -55,18 +77,18 @@ func Write(conn *net.TCPConn, data []byte) error {
 	return nil
 }
 
-func (c ClientData) Connect(address string) (*net.TCPConn, error) {
+func (c *ClientData) Connect(address string) error {
 
 	addr, err := net.ResolveTCPAddr("tcp", address)
 
 	if err != nil {
-		return nil, errors.New("could not resolve tcp address")
+		return errors.New("could not resolve tcp address")
 	}
 
 	conn, err := net.DialTCP("tcp", nil, addr)
 
 	if err != nil {
-		return nil, errors.New("could not dial tcp")
+		return errors.New("could not dial tcp")
 	}
 
 	bytes, _ := c.Serialize()
@@ -75,10 +97,13 @@ func (c ClientData) Connect(address string) (*net.TCPConn, error) {
 
 	if b == 0 || err != nil {
 		fmt.Println("Client not connected")
-		return nil, errors.New("could not connect client")
+		return errors.New("could not connect client")
 	}
+
+	c.Connected = true
+	c.Network = conn
 
 	fmt.Println("Client connected")
 
-	return conn, nil
+	return nil
 }

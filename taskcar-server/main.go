@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"fmt"
-	"os"
 	"strings"
 	"taskcar/client"
 	"taskcar/data"
@@ -12,6 +11,8 @@ import (
 	"time"
 )
 
+const SERVER_PACKET_SIZE_BYTES = 128
+
 type DataType struct {
 	value1 string
 	value2 string
@@ -19,11 +20,11 @@ type DataType struct {
 }
 
 func (d DataType) Serialize() ([]byte, error) {
-	return []byte(d.value1 + ";" + d.value2 + ";" + d.value3 + "\n"), nil
+	return []byte("\\" + d.value1 + ";" + d.value2 + ";" + d.value3 + "\\"), nil
 }
 
 func (DataType) Deserialize(data []byte) (data.Serializable, error) {
-
+	fmt.Printf("string(data): %v\n", string(data))
 	values := strings.Split(string(data), ";")
 
 	if len(values) < 3 {
@@ -45,60 +46,39 @@ var messages stack.Stack
 func callback(obj data.Serializable) {
 	data := obj.(any)
 
+	fmt.Printf("data: %v\n", data)
+
 	messages.Push(&data)
 }
 
 func main() {
 	messages = stack.New(15)
+
 	handler := data.NewHandler("example", callback, DataType{})
 	server.RegisterNewHandler(handler)
-	srv := server.NewServerData("localhost", 5000, "", "")
 
-	flag := make(chan server.ServerData)
-
-	go server.InitTCP(srv, flag)
-	srv = <-flag
-
-	if !srv.Running {
-		os.Exit(-1)
-	}
-
-	fmt.Println("Server initialization finished")
-
-	fmt.Printf("(<-flag): %v\n", srv)
-
-	cli := client.NewClientData("a", "b", "example")
-
-	conn, err := cli.Connect(srv.Address())
-
-	if err != nil {
-		fmt.Print(err)
-		return
-	}
+	srv := server.Start("localhost", "", "", 5000)
+	time.Sleep(1 * time.Second)
 
 	data := DataType{
 		value1: "Hello",
 		value2: ",",
-		value3: "world!",
+		value3: "world",
 	}
 
-	bytes, _ := data.Serialize()
-	buffer := make([]byte, 512)
+	cli := client.NewClientData("", "", "example")
 
-	for bytes_written, i := 0, 0; bytes_written < 512; bytes_written++ {
-		if i == len(bytes) {
-			i = 0
-		}
-
-		if 512-bytes_written < len(bytes) {
-			break
-		}
-
-		buffer[bytes_written] = bytes[i]
-		i++
+	if cli.Connect(srv.Address()) != nil {
+		fmt.Println("client connection failed")
+		return
 	}
 
-	client.Write(conn, buffer)
+	if cli.Network == nil {
+		fmt.Println("network is nil")
+		return
+	}
+
+	cli.SendPacket(data)
 
 	time.Sleep(1 * time.Second)
 
@@ -109,9 +89,5 @@ func main() {
 		val = messages.Pop()
 	}
 
-	srv = <-flag
-
-	if !srv.Running {
-		fmt.Println("server closed")
-	}
+	srv.Wait()
 }
