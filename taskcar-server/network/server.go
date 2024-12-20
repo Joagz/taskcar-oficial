@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"net"
+	"os"
 	"strconv"
 	"strings"
 	"taskcar/config"
@@ -102,8 +103,6 @@ func readClient(client net.Conn, handler *handlerData) {
 		packet := make([]byte, config.SERVER_PACKET_SIZE_BYTES)
 		_, err := client.Read(packet)
 
-		fmt.Printf("string(packet): %v\n", string(packet))
-
 		if err != nil {
 			if len(buffer) > 0 {
 				lastBufferIndex = 0
@@ -180,7 +179,7 @@ func acceptClients(listener net.Listener) {
 		}
 
 		if handler == nil {
-			fmt.Printf("handler for packet with topic %v not registered\n", clientdata.Topic)
+			fmt.Fprintf(os.Stderr, "handler for packet with topic %v not registered\n", clientdata.Topic)
 			continue
 		}
 

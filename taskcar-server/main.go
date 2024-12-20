@@ -6,6 +6,7 @@ import (
 	"strings"
 	"taskcar/network"
 	"taskcar/stack"
+	"time"
 )
 
 var messages stack.Stack
@@ -21,7 +22,6 @@ func (d DataType) Serialize() ([]byte, error) {
 }
 
 func (DataType) Deserialize(data []byte) (network.Serializable, error) {
-	fmt.Printf("string(data): %v\n", string(data))
 	values := strings.Split(string(data), ";")
 
 	if len(values) < 3 {
@@ -41,8 +41,6 @@ func (DataType) Deserialize(data []byte) (network.Serializable, error) {
 func callback(obj network.Serializable) {
 	data := obj.(any)
 
-	fmt.Printf("data: %v\n", data)
-
 	messages.Push(&data)
 }
 
@@ -61,16 +59,18 @@ func main() {
 	}
 
 	cli.Write(data)
+	cli.Write(data)
+	cli.Write(data)
+	cli.Write(data)
+	cli.Write(data)
+	cli.Write(data)
 
+	time.Sleep(time.Second)
 	val := messages.Pop()
 
 	for val != nil {
 		fmt.Printf("val: %v\n", *val)
 		val = messages.Pop()
-	}
-
-	for {
-
 	}
 
 }
