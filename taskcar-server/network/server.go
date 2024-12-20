@@ -37,14 +37,11 @@ Sends bytes to the client's registered handler
 */
 func dispatchToHandler(buf []byte, handler *handlerData) {
 	obj, _ := handler.Deserialize([]byte(buf))
-	fmt.Println("handler dispatched")
 
 	if obj != nil {
 		handler.Callback(obj)
 		return
 	}
-
-	fmt.Println("object couldn't be deserialized")
 }
 
 /*
@@ -121,13 +118,11 @@ func readClient(client net.Conn, handler *handlerData) {
 
 		// error case
 		if lastBufferIndex == 0 && startRuneIndex == -1 {
-			fmt.Println("error case")
 			continue
 		}
 
 		// finished reading previous packet
 		if lastBufferIndex > 0 && startRuneIndex > 0 {
-			fmt.Println("finished reading previous packet")
 			// startRuneIndex = endRuneIndex
 			endRuneIndex := startRuneIndex
 			copy(buffer[(lastBufferIndex+1):], packet[:endRuneIndex])
@@ -140,8 +135,6 @@ func readClient(client net.Conn, handler *handlerData) {
 
 		// reading packet with no finish
 		if lastBufferIndex > 0 && startRuneIndex < 0 {
-			fmt.Println("reading packet with no finish")
-
 			lastBufferIndex += copy(buffer[(lastBufferIndex+1):], packet)
 
 			continue
@@ -149,7 +142,6 @@ func readClient(client net.Conn, handler *handlerData) {
 
 		// started new packet
 		if lastBufferIndex == 0 && startRuneIndex >= 0 {
-			fmt.Println("started new packet")
 			endRuneIndex := strings.IndexByte(string(packet[(startRuneIndex+1):]), '\\')
 
 			if endRuneIndex == -1 {
@@ -184,7 +176,6 @@ func acceptClients(listener net.Listener) {
 
 		if err != nil {
 			client.Close()
-			fmt.Println(err.Error())
 			continue
 		}
 

@@ -28,6 +28,7 @@ func Start(host, username, password string, port int) ServerData {
 	}
 
 	time.Sleep(config.SERVER_DEFAULT_START_TIME)
+	fmt.Println("Server running in port", port)
 
 	return srv
 }
@@ -44,5 +45,9 @@ func Connect(root_user, root_password, topic, hostname string, port int) *Client
 		fmt.Fprintf(os.Stderr, "ConnectNewClient: network is nil\n")
 		return nil
 	}
+
+	fmt.Printf("Client connected to %s:%d\n", hostname, port)
+	time.Sleep(config.SERVER_DEFAULT_START_TIME)
+
 	return &cli
 }
