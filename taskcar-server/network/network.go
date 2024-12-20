@@ -6,18 +6,28 @@ package network
 import (
 	"fmt"
 	"os"
+	"taskcar/config"
+	"time"
 )
+
+func (s *ServerData) Stop() {
+	s.Running = false
+	s.listener.Close()
+
+	s = nil
+}
 
 func Start(host, username, password string, port int) ServerData {
 	srv := NewServerData(host, port, username, password)
 
-	go initTCP(&srv, srv.GetFlag())
-	srv.Running = srv.Wait()
+	initTCP(&srv)
 
 	if !srv.Running {
 		fmt.Fprintf(os.Stderr, "Start: could not start server in %s:%d\n", host, port)
 		os.Exit(-1)
 	}
+
+	time.Sleep(config.SERVER_DEFAULT_START_TIME)
 
 	return srv
 }
@@ -34,6 +44,5 @@ func Connect(root_user, root_password, topic, hostname string, port int) *Client
 		fmt.Fprintf(os.Stderr, "ConnectNewClient: network is nil\n")
 		return nil
 	}
-
 	return &cli
 }

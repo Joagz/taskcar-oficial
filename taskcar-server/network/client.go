@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"net"
+	"os"
 	"strings"
 	"taskcar/config"
 )
@@ -57,7 +58,7 @@ func (cli ClientData) Write(toWrite Serializable) {
 		totalWritten += written
 
 		if err != nil {
-			fmt.Println("error writing")
+			fmt.Fprintf(os.Stderr, "Write: error sending packet, discarding")
 			return
 		}
 	}
@@ -82,14 +83,12 @@ func (c *ClientData) connectClientData(address string) error {
 	b, err := conn.Write(bytes)
 
 	if b == 0 || err != nil {
-		fmt.Println("Client not connected")
+		fmt.Fprintf(os.Stderr, "connectClientData: could not connect client")
 		return errors.New("could not connect client")
 	}
 
 	c.Connected = true
 	c.Network = conn
-
-	fmt.Println("Client connected")
 
 	return nil
 }

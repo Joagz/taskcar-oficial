@@ -51,8 +51,8 @@ func main() {
 
 	network.RegisterNewHandler("example", callback, DataType{})
 
-	srv := network.Start("localhost", "", "", 5000)
-	cli := network.Connect("", "", "example", "localhost", 5000)
+	network.Start("localhost", "", "", 7000)
+	cli := network.Connect("", "", "example", "localhost", 7000)
 
 	data := DataType{
 		value1: "Hello",
@@ -69,5 +69,8 @@ func main() {
 		val = messages.Pop()
 	}
 
-	srv.Wait()
+	for {
+
+	}
+
 }

@@ -15,15 +15,7 @@ type ServerData struct {
 	root_user     string
 	root_password string // ? encrypt
 	Running       bool
-	flag          chan bool
-}
-
-func (s ServerData) GetFlag() chan bool {
-	return s.flag
-}
-
-func (s ServerData) Wait() bool {
-	return <-s.flag
+	listener      *net.TCPListener
 }
 
 func (srv ServerData) Address() string {
@@ -31,14 +23,12 @@ func (srv ServerData) Address() string {
 }
 
 func NewServerData(host string, port int, root_user string, root_password string) ServerData {
-	flag := make(chan bool)
-
 	return ServerData{
 		Host:          host,
 		Port:          port,
 		root_user:     root_user,
 		root_password: encrypt(root_password),
-		flag:          flag,
+		Running:       false,
 	}
 }
 
@@ -203,14 +193,14 @@ func acceptClients(listener net.Listener) {
 			continue
 		}
 
-		go readClient(client, handler)
+		readClient(client, handler)
 
 	}
 }
 
 // receives a pointer to a ServerData struct and a boolean channel
 // that determines the running state of the server
-func initTCP(srv *ServerData, running chan bool) {
+func initTCP(srv *ServerData) {
 
 	addr, err := net.ResolveTCPAddr("tcp", srv.Address())
 
@@ -220,10 +210,10 @@ func initTCP(srv *ServerData, running chan bool) {
 
 	checkErrExit(err)
 
-	running <- true
+	srv.listener = listener
+
+	srv.Running = true
 
 	// returns only if an error occurs
-	acceptClients(listener)
-
-	running <- false
+	go acceptClients(listener)
 }
