@@ -210,7 +210,7 @@ func acceptClients(listener net.Listener) {
 
 // receives a pointer to a ServerData struct and a boolean channel
 // that determines the running state of the server
-func InitTCP(srv *ServerData, running chan bool) {
+func initTCP(srv *ServerData, running chan bool) {
 
 	addr, err := net.ResolveTCPAddr("tcp", srv.Address())
 

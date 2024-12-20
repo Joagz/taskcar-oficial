@@ -11,7 +11,7 @@ import (
 func Start(host, username, password string, port int) ServerData {
 	srv := NewServerData(host, port, username, password)
 
-	go InitTCP(&srv, srv.GetFlag())
+	go initTCP(&srv, srv.GetFlag())
 	srv.Running = srv.Wait()
 
 	if !srv.Running {
