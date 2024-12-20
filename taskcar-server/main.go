@@ -12,13 +12,13 @@ import (
 var messages stack.Stack
 
 type DataType struct {
-	value1 string
-	value2 string
-	value3 string
+	Value1 string `serv:"value_1"`
+	Value2 string `serv:"value_2"`
+	Value3 string `serv:"value_3"`
 }
 
 func (d DataType) Serialize() ([]byte, error) {
-	return []byte("\\" + d.value1 + ";" + d.value2 + ";" + d.value3 + "\\"), nil
+	return []byte("\\" + d.Value1 + ";" + d.Value2 + ";" + d.Value3 + "\\"), nil
 }
 
 func (DataType) Deserialize(data []byte) (network.Serializable, error) {
@@ -31,31 +31,22 @@ func (DataType) Deserialize(data []byte) (network.Serializable, error) {
 	value1, value2, value3 := values[0], values[1], values[2]
 
 	return DataType{
-		value1: value1,
-		value2: value2,
-		value3: value3,
+		Value1: value1,
+		Value2: value2,
+		Value3: value3,
 	}, nil
 
 }
 
-func callback(obj network.Serializable) {
-	data := obj.(any)
-
-	messages.Push(&data)
-}
-
-func main() {
+func sendData() {
 	messages = stack.New(15)
 
-	network.RegisterNewHandler("example", callback, DataType{})
-
-	network.Start("localhost", "", "", 7000)
 	cli := network.Connect("", "", "example", "localhost", 7000)
 
 	data := DataType{
-		value1: "Hello",
-		value2: ",",
-		value3: "world",
+		Value1: "Hello",
+		Value2: ",",
+		Value3: "world",
 	}
 
 	cli.Write(data)
@@ -72,5 +63,29 @@ func main() {
 		fmt.Printf("val: %v\n", *val)
 		val = messages.Pop()
 	}
+
+}
+
+func callback(obj network.Serializable) {
+	data := obj.(any)
+
+	messages.Push(&data)
+}
+
+func main() {
+	// network.RegisterNewHandler("example", callback, DataType{})
+	// network.Start("localhost", "", "", 7000)
+	data := DataType{
+		Value1: "Hello",
+		Value2: ",",
+		Value3: "world",
+	}
+	// sendData()
+
+	bytes, _ := data.Serialize()
+	vals := &DataType{}
+	network.DefaultDeserializer(bytes, vals)
+
+	fmt.Printf("vals: %v\n", vals)
 
 }
