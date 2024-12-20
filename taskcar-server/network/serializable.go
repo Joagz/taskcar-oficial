@@ -6,6 +6,7 @@ import (
 	"reflect"
 	"strconv"
 	"strings"
+	"taskcar/config"
 )
 
 type Serializable interface {
@@ -25,12 +26,42 @@ func stringToBool(v string) bool {
 	return v == "true"
 }
 
-func DefaultSerializer(values ...any) string {
+func DefaultSerializer(t any) ([]byte, error) {
+	types := reflect.TypeOf(t)
+	vals := reflect.ValueOf(t)
+	stType := types.Elem()
+	stVal := vals.Elem()
+
+	if vals.Kind() != reflect.Ptr || vals.Elem().Kind() != reflect.Struct {
+		fmt.Println("Expected a pointer to a struct")
+		return nil, fmt.Errorf("expected a pointer to a struct")
+	}
+
+	var finalString string
+
+	for i := 0; i < stType.NumField(); i++ {
+		typeField := stType.Field(i)
+		valueField := stVal.Field(i)
+
+		var key, value string
+		keystr := typeField.Tag.Get(config.DEFAULT_STRUCT_TAG)
+
+		if keystr != "" {
+			key = keystr
+		} else {
+			key = typeField.Name
+		}
+
+		value = valueField.String()
+
+		finalString += fmt.Sprintf("%s:%s\n", key, value)
+	}
+
+	return []byte(finalString[:(len(finalString) - 1)]), nil
 
 }
 
 func DefaultDeserializer(data []byte, t any) error {
-	values := strings.Split(string(data), ";")
 
 	val := reflect.ValueOf(t)
 	st := val.Elem()
@@ -40,10 +71,23 @@ func DefaultDeserializer(data []byte, t any) error {
 		return fmt.Errorf("expected a pointer to a struct")
 	}
 
+	keyvalues := strings.Split(string(data), "\n")
+
+	values := make([]string, len(keyvalues))
+	for i, r := range keyvalues {
+		a := strings.Split(r, ":")
+
+		if len(a) > 1 {
+			values[i] = a[1]
+		}
+	}
+
+	fmt.Printf("values: %v\n", values)
+
 	if len(values) != st.NumField() {
 		return nil
 	}
-
+	// todo: deserialize unordered struct string
 	for i := 0; i < st.NumField(); i++ {
 		v := st.Field(i)
 

@@ -75,14 +75,17 @@ func callback(obj network.Serializable) {
 func main() {
 	// network.RegisterNewHandler("example", callback, DataType{})
 	// network.Start("localhost", "", "", 7000)
-	data := DataType{
+
+	data := &DataType{
 		Value1: "Hello",
 		Value2: ",",
 		Value3: "world",
 	}
+
 	// sendData()
 
-	bytes, _ := data.Serialize()
+	bytes, _ := network.DefaultSerializer(data)
+
 	vals := &DataType{}
 	network.DefaultDeserializer(bytes, vals)
 
