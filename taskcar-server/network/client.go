@@ -1,4 +1,4 @@
-package client
+package network
 
 import (
 	"errors"
@@ -6,7 +6,6 @@ import (
 	"net"
 	"strings"
 	"taskcar/config"
-	"taskcar/data"
 )
 
 type ClientData struct {
@@ -17,7 +16,7 @@ type ClientData struct {
 	Network       *net.TCPConn
 }
 
-func NewClientData(root_user, root_password, topic string) ClientData {
+func newClientData(root_user, root_password, topic string) ClientData {
 	return ClientData{
 		root_user:     root_user,
 		root_password: root_password,
@@ -32,7 +31,7 @@ func (c ClientData) Serialize() ([]byte, error) {
 	return []byte(c.root_user + ";" + c.root_password + ";" + c.Topic + "\n"), nil
 }
 
-func (ClientData) Deserialize(data []byte) (data.Serializable, error) {
+func (ClientData) Deserialize(data []byte) (Serializable, error) {
 	values := strings.Split(string(data), ";")
 
 	if len(values) < 3 {
@@ -42,12 +41,12 @@ func (ClientData) Deserialize(data []byte) (data.Serializable, error) {
 
 	root_user, root_password, topic := values[0], values[1], values[2]
 
-	clientData := NewClientData(root_user, root_password, topic)
+	clientData := newClientData(root_user, root_password, topic)
 
 	return clientData, nil
 }
 
-func (cli ClientData) SendPacket(toWrite data.Serializable) {
+func (cli ClientData) Write(toWrite Serializable) {
 	bytes, _ := toWrite.Serialize()
 
 	totalToWrite := len(bytes)
@@ -61,23 +60,10 @@ func (cli ClientData) SendPacket(toWrite data.Serializable) {
 			fmt.Println("error writing")
 			return
 		}
-
 	}
-
 }
 
-func Write(conn *net.TCPConn, data []byte) error {
-	bytes, err := conn.Write(data)
-
-	if bytes == 0 || err != nil {
-		fmt.Printf("err: %v\n", err)
-		return errors.New("could not write to server")
-	}
-
-	return nil
-}
-
-func (c *ClientData) Connect(address string) error {
+func (c *ClientData) connectClientData(address string) error {
 
 	addr, err := net.ResolveTCPAddr("tcp", address)
 

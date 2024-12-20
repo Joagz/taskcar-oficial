@@ -4,14 +4,11 @@ import (
 	"errors"
 	"fmt"
 	"strings"
-	"taskcar/client"
-	"taskcar/data"
-	"taskcar/server"
+	"taskcar/network"
 	"taskcar/stack"
-	"time"
 )
 
-const SERVER_PACKET_SIZE_BYTES = 128
+var messages stack.Stack
 
 type DataType struct {
 	value1 string
@@ -23,7 +20,7 @@ func (d DataType) Serialize() ([]byte, error) {
 	return []byte("\\" + d.value1 + ";" + d.value2 + ";" + d.value3 + "\\"), nil
 }
 
-func (DataType) Deserialize(data []byte) (data.Serializable, error) {
+func (DataType) Deserialize(data []byte) (network.Serializable, error) {
 	fmt.Printf("string(data): %v\n", string(data))
 	values := strings.Split(string(data), ";")
 
@@ -41,9 +38,7 @@ func (DataType) Deserialize(data []byte) (data.Serializable, error) {
 
 }
 
-var messages stack.Stack
-
-func callback(obj data.Serializable) {
+func callback(obj network.Serializable) {
 	data := obj.(any)
 
 	fmt.Printf("data: %v\n", data)
@@ -54,11 +49,10 @@ func callback(obj data.Serializable) {
 func main() {
 	messages = stack.New(15)
 
-	handler := data.NewHandler("example", callback, DataType{})
-	server.RegisterNewHandler(handler)
+	network.RegisterNewHandler("example", callback, DataType{})
 
-	srv := server.Start("localhost", "", "", 5000)
-	time.Sleep(1 * time.Second)
+	srv := network.Start("localhost", "", "", 5000)
+	cli := network.Connect("", "", "example", "localhost", 5000)
 
 	data := DataType{
 		value1: "Hello",
@@ -66,21 +60,7 @@ func main() {
 		value3: "world",
 	}
 
-	cli := client.NewClientData("", "", "example")
-
-	if cli.Connect(srv.Address()) != nil {
-		fmt.Println("client connection failed")
-		return
-	}
-
-	if cli.Network == nil {
-		fmt.Println("network is nil")
-		return
-	}
-
-	cli.SendPacket(data)
-
-	time.Sleep(1 * time.Second)
+	cli.Write(data)
 
 	val := messages.Pop()
 
