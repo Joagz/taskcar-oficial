@@ -1,9 +1,7 @@
 package main
 
 import (
-	"errors"
 	"fmt"
-	"strings"
 	"taskcar/network"
 	"taskcar/stack"
 	"time"
@@ -15,27 +13,6 @@ type DataType struct {
 	Value1 string `serv:"value_1"`
 	Value2 string `serv:"value_2"`
 	Value3 string `serv:"value_3"`
-}
-
-func (d DataType) Serialize() ([]byte, error) {
-	return []byte("\\" + d.Value1 + ";" + d.Value2 + ";" + d.Value3 + "\\"), nil
-}
-
-func (DataType) Deserialize(data []byte) (network.Serializable, error) {
-	values := strings.Split(string(data), ";")
-
-	if len(values) < 3 {
-		return nil, errors.New("invalid attribute length")
-	}
-
-	value1, value2, value3 := values[0], values[1], values[2]
-
-	return DataType{
-		Value1: value1,
-		Value2: value2,
-		Value3: value3,
-	}, nil
-
 }
 
 func sendData() {
@@ -66,10 +43,8 @@ func sendData() {
 
 }
 
-func callback(obj network.Serializable) {
-	data := obj.(any)
-
-	messages.Push(&data)
+func callback(obj any) {
+	messages.Push(&obj)
 }
 
 func main() {
@@ -84,10 +59,10 @@ func main() {
 
 	// sendData()
 
-	bytes, _ := network.DefaultSerializer(data)
+	bytes, _ := network.Serialize(data)
 
 	vals := &DataType{}
-	network.DefaultDeserializer(bytes, vals)
+	network.Deserialize(bytes, vals)
 
 	fmt.Printf("vals: %v\n", vals)
 

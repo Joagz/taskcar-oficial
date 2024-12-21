@@ -37,7 +37,7 @@ func NewServerData(host string, port int, root_user string, root_password string
 Sends bytes to the client's registered handler
 */
 func dispatchToHandler(buf []byte, handler *handlerData) {
-	obj, _ := handler.Deserialize([]byte(buf))
+	obj := Deserialize(buf, handler.Type)
 
 	if obj != nil {
 		handler.Callback(obj)
@@ -63,10 +63,8 @@ func handleConnection(conn net.Conn) (*handlerData, *ClientData, error) {
 		return nil, nil, err
 	}
 
-	// deserialize client data
-	var cli ClientData
-	obj, _ := cli.Deserialize(buffer)
-	cli = obj.(ClientData)
+	cli := ClientData{}
+	Deserialize(buffer, &cli)
 
 	if !checkCredentials(cli) {
 		return nil, nil, errors.New("invalid credentials")

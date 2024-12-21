@@ -9,11 +9,6 @@ import (
 	"taskcar/config"
 )
 
-type Serializable interface {
-	Serialize() ([]byte, error)
-	Deserialize([]byte) (Serializable, error)
-}
-
 func boolToString(v bool) string {
 	if v {
 		return "true"
@@ -26,7 +21,7 @@ func stringToBool(v string) bool {
 	return v == "true"
 }
 
-func DefaultSerializer(t any) ([]byte, error) {
+func Serialize(t any) ([]byte, error) {
 	types := reflect.TypeOf(t)
 	vals := reflect.ValueOf(t)
 	stType := types.Elem()
@@ -61,7 +56,9 @@ func DefaultSerializer(t any) ([]byte, error) {
 
 }
 
-func DefaultDeserializer(data []byte, t any) error {
+// Receives a byte array and a pointer to a struct. Deserializes the byte array
+// and modifies the attributes in the struct
+func Deserialize(data []byte, t any) error {
 
 	val := reflect.ValueOf(t)
 	st := val.Elem()

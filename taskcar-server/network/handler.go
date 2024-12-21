@@ -1,22 +1,21 @@
 package network
 
-type handlerCallback func(Serializable)
+type handlerCallback func(any)
 
 type handlerData struct {
 	Topic    string
 	Callback handlerCallback
-	Serializable
+	Type     any
 }
 
-func newHandler(topic string, handler handlerCallback, serializable Serializable) handlerData {
+func newHandler(topic string, handler handlerCallback) handlerData {
 	return handlerData{
-		Topic:        topic,
-		Callback:     handler,
-		Serializable: serializable,
+		Topic:    topic,
+		Callback: handler,
 	}
 }
 
-func RegisterNewHandler(topic string, callback handlerCallback, serializable Serializable) {
-	handler := newHandler(topic, callback, serializable)
+func RegisterNewHandler(topic string, callback handlerCallback) {
+	handler := newHandler(topic, callback)
 	handlers = append(handlers, handler)
 }

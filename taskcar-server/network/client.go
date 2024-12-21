@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"net"
 	"os"
-	"strings"
 	"taskcar/config"
 )
 
@@ -25,30 +24,14 @@ func newClientData(root_user, root_password, topic string) ClientData {
 	}
 }
 
-func (c ClientData) Serialize() ([]byte, error) {
+func (cli ClientData) Write(value any) {
 
-	// could check some attrbs
+	bytes, err := Serialize(value)
 
-	return []byte(c.root_user + ";" + c.root_password + ";" + c.Topic + "\n"), nil
-}
-
-func (ClientData) Deserialize(data []byte) (Serializable, error) {
-	values := strings.Split(string(data), ";")
-
-	if len(values) < 3 {
-		fmt.Print("invalid data length")
-		return nil, errors.New("invalid data length")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Write: invalid object passedn")
+		return
 	}
-
-	root_user, root_password, topic := values[0], values[1], values[2]
-
-	clientData := newClientData(root_user, root_password, topic)
-
-	return clientData, nil
-}
-
-func (cli ClientData) Write(toWrite Serializable) {
-	bytes, _ := toWrite.Serialize()
 
 	totalToWrite := len(bytes)
 	totalWritten := 0
@@ -78,7 +61,7 @@ func (c *ClientData) connectClientData(address string) error {
 		return errors.New("could not dial tcp")
 	}
 
-	bytes, _ := c.Serialize()
+	bytes, _ := Serialize(c)
 
 	b, err := conn.Write(bytes)
 
