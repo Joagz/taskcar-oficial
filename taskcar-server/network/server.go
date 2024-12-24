@@ -39,8 +39,8 @@ Sends bytes to the client's registered handler
 func dispatchToHandler(buf []byte, handler *handlerData) {
 	obj := Deserialize(buf, handler.Type)
 
-	if obj != nil {
-		handler.Callback(obj)
+	if obj == nil {
+		handler.Callback(handler.Type)
 		return
 	}
 }
@@ -48,25 +48,18 @@ func dispatchToHandler(buf []byte, handler *handlerData) {
 /*
 Determines a handler for the topic that the client registers.
 */
-func handleConnection(conn net.Conn) (*handlerData, *ClientData, error) {
-	buffer := make([]byte, 1024)
-	bytes, err := conn.Read(buffer)
+func handleConnection(buffer []byte) (*handlerData, *ClientData, error) {
 
-	buffer = []byte(strings.Split(string(buffer), "\n")[0])
-
-	if bytes == 0 {
-		return nil, nil, errors.New("no data received")
-	}
+	cli := ClientData{}
+	err := Deserialize(buffer, &cli)
 
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
 		return nil, nil, err
 	}
 
-	cli := ClientData{}
-	Deserialize(buffer, &cli)
-
 	if !checkCredentials(cli) {
+		fmt.Println("invalid credentials")
 		return nil, nil, errors.New("invalid credentials")
 	}
 
@@ -80,16 +73,84 @@ func handleConnection(conn net.Conn) (*handlerData, *ClientData, error) {
 	}
 
 	if handler == nil {
+		fmt.Println("no handler function registered")
 		return nil, &cli, errors.New("no handler function registered")
 	}
 
 	return handler, &cli, nil
 }
 
+func readClient(client net.Conn) []byte {
+	buffer := make([]byte, config.SERVER_BUFFER_SIZE_BYTES)
+	lastBufferIndex := 0
+
+	for {
+		if cap(buffer)-config.SERVER_PACKET_SIZE_BYTES < 0 {
+			buffer = resizeBuffer(buffer, lastBufferIndex)
+		}
+
+		packet := make([]byte, config.SERVER_PACKET_SIZE_BYTES)
+		_, err := client.Read(packet)
+
+		if err != nil {
+			if len(buffer) > 0 {
+				lastBufferIndex = 0
+			}
+			continue
+		}
+
+		startRuneIndex := strings.IndexByte(string(packet), '\\')
+
+		// fmt.Printf("startRuneIndex: %v\n", startRuneIndex)
+		// fmt.Printf("lastBufferIndex: %v\n", lastBufferIndex)
+
+		// error case
+		if lastBufferIndex == 0 && startRuneIndex == -1 {
+			fmt.Println("error case")
+			continue
+		}
+
+		// finished reading previous packet
+		if lastBufferIndex > 0 && startRuneIndex > 0 {
+			fmt.Println("finished reading previous packet")
+			// startRuneIndex = endRuneIndex
+			endRuneIndex := startRuneIndex
+			copy(buffer[(lastBufferIndex+1):], packet[:endRuneIndex])
+
+			break
+		}
+
+		// reading packet with no finish
+		if lastBufferIndex > 0 && startRuneIndex < 0 {
+			fmt.Println("reading packet with no finish")
+			lastBufferIndex += copy(buffer[(lastBufferIndex+1):], packet)
+
+			continue
+		}
+
+		// started new packet
+		if lastBufferIndex == 0 && startRuneIndex >= 0 {
+			endRuneIndex := strings.IndexByte(string(packet[(startRuneIndex+1):]), '\\')
+
+			if endRuneIndex == -1 {
+				lastBufferIndex += copy(buffer, packet[(startRuneIndex+1):])
+				continue
+			}
+
+			copy(buffer, packet[(startRuneIndex+1):(endRuneIndex+1)])
+
+			break
+		}
+
+	}
+
+	return buffer
+}
+
 /*
-Reads incoming client data
+Reads incoming client data and dispatches it to the correspoding handler
 */
-func readClient(client net.Conn, handler *handlerData) {
+func readClientAndDispatch(client net.Conn, handler *handlerData) {
 	buffer := make([]byte, config.SERVER_BUFFER_SIZE_BYTES)
 	lastBufferIndex := 0
 
@@ -149,13 +210,14 @@ func readClient(client net.Conn, handler *handlerData) {
 			// fmt.Printf("packet[startRuneIndex:endRuneIndex]: %v\n", packet[startRuneIndex:endRuneIndex])
 
 			// else
-			dispatchToHandler(packet[startRuneIndex:endRuneIndex], handler)
+			dispatchToHandler(packet[startRuneIndex:(endRuneIndex+1)], handler)
 			lastBufferIndex = 0
 
 			continue
 		}
 
 	}
+
 }
 
 /*
@@ -166,12 +228,15 @@ func acceptClients(listener net.Listener) {
 		client, err := listener.Accept()
 
 		if err != nil {
-			break
+			fmt.Println("client accept error")
+			continue
 		}
 
-		handler, clientdata, err := handleConnection(client)
+		buffer := readClient(client)
+		handler, clientdata, err := handleConnection(buffer)
 
-		if err != nil {
+		if err != nil || clientdata == nil {
+			fmt.Println("Closing client connection")
 			client.Close()
 			continue
 		}
@@ -181,7 +246,9 @@ func acceptClients(listener net.Listener) {
 			continue
 		}
 
-		readClient(client, handler)
+		println("readClientAndDispatch")
+
+		readClientAndDispatch(client, handler)
 
 	}
 }

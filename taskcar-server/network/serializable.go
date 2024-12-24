@@ -33,10 +33,19 @@ func Serialize(t any) ([]byte, error) {
 	}
 
 	var finalString string
+	finalString += "\\"
 
 	for i := 0; i < stType.NumField(); i++ {
 		typeField := stType.Field(i)
 		valueField := stVal.Field(i)
+
+		if !valueField.CanSet() {
+			continue
+		}
+
+		if !typeField.IsExported() {
+			continue
+		}
 
 		var key, value string
 		keystr := typeField.Tag.Get(config.DEFAULT_STRUCT_TAG)
@@ -47,25 +56,30 @@ func Serialize(t any) ([]byte, error) {
 			key = typeField.Name
 		}
 
-		value = valueField.String()
+		if valueField.Kind() == reflect.Bool {
+			value = boolToString(valueField.Bool())
+		} else {
+			value = valueField.String()
+		}
 
 		finalString += fmt.Sprintf("%s:%s\n", key, value)
 	}
+	b := []byte(finalString)
+	b[len(finalString)-1] = '\\'
+	finalString = string(b)
 
-	return []byte(finalString[:(len(finalString) - 1)]), nil
+	return []byte(finalString), nil
 
 }
 
 // Receives a byte array and a pointer to a struct. Deserializes the byte array
 // and modifies the attributes in the struct
 func Deserialize(data []byte, t any) error {
-
 	val := reflect.ValueOf(t)
 	st := val.Elem()
 
-	if val.Kind() != reflect.Ptr || val.Elem().Kind() != reflect.Struct {
-		fmt.Println("Expected a pointer to a struct")
-		return fmt.Errorf("expected a pointer to a struct")
+	if val.Kind() != reflect.Ptr {
+		return fmt.Errorf("expected a pointer")
 	}
 
 	keyvalues := strings.Split(string(data), "\n")
@@ -79,11 +93,6 @@ func Deserialize(data []byte, t any) error {
 		}
 	}
 
-	fmt.Printf("values: %v\n", values)
-
-	if len(values) != st.NumField() {
-		return nil
-	}
 	// todo: deserialize unordered struct string
 	for i := 0; i < st.NumField(); i++ {
 		v := st.Field(i)
@@ -140,5 +149,8 @@ func Deserialize(data []byte, t any) error {
 		}
 
 	}
+
+	t = val.Elem()
+
 	return nil
 }

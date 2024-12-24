@@ -9,39 +9,33 @@ import (
 )
 
 type ClientData struct {
-	root_user     string
-	root_password string
-	Topic         string
-	Connected     bool
-	Network       *net.TCPConn
+	Topic         string `serv:"topic"`
+	Connected     bool   `serv:"connected"`
+	Root_password string `serv:"root_password"`
+	Root_user     string `serv:"root_user"`
+	network       *net.TCPConn
 }
 
 func newClientData(root_user, root_password, topic string) ClientData {
 	return ClientData{
-		root_user:     root_user,
-		root_password: root_password,
+		Root_user:     root_user,
+		Root_password: root_password,
 		Topic:         topic,
 	}
 }
 
-func (cli ClientData) Write(value any) {
-
-	bytes, err := Serialize(value)
-
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Write: invalid object passedn")
-		return
-	}
+func (cli ClientData) Write(bytes []byte) {
 
 	totalToWrite := len(bytes)
 	totalWritten := 0
 
 	for totalWritten < totalToWrite {
-		written, err := cli.Network.Write(bytes[totalWritten:(totalWritten + config.SERVER_PACKET_SIZE_BYTES)])
+		written, err := cli.network.Write(bytes[totalWritten:(totalWritten + min(config.SERVER_PACKET_SIZE_BYTES, len(bytes)))])
 		totalWritten += written
 
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "Write: error sending packet, discarding")
+			fmt.Printf("err.Error(): %v\n", err.Error())
+			fmt.Fprintf(os.Stderr, "Write: error sending packet, discarding\n")
 			return
 		}
 	}
@@ -71,7 +65,7 @@ func (c *ClientData) connectClientData(address string) error {
 	}
 
 	c.Connected = true
-	c.Network = conn
+	c.network = conn
 
 	return nil
 }

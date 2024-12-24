@@ -16,9 +16,8 @@ type DataType struct {
 }
 
 func sendData() {
-	messages = stack.New(15)
-
 	cli := network.Connect("", "", "example", "localhost", 7000)
+	messages = stack.New(15)
 
 	data := DataType{
 		Value1: "Hello",
@@ -26,14 +25,12 @@ func sendData() {
 		Value3: "world",
 	}
 
-	cli.Write(data)
-	cli.Write(data)
-	cli.Write(data)
-	cli.Write(data)
-	cli.Write(data)
-	cli.Write(data)
+	bytes, _ := network.Serialize(&data)
+
+	cli.Write(bytes)
 
 	time.Sleep(time.Second)
+
 	val := messages.Pop()
 
 	for val != nil {
@@ -44,26 +41,13 @@ func sendData() {
 }
 
 func callback(obj any) {
+	fmt.Printf("obj: %v\n", obj)
 	messages.Push(&obj)
 }
 
 func main() {
-	// network.RegisterNewHandler("example", callback, DataType{})
-	// network.Start("localhost", "", "", 7000)
+	network.RegisterNewHandler("example", callback, &DataType{})
+	network.Start("localhost", "", "", 7000)
 
-	data := &DataType{
-		Value1: "Hello",
-		Value2: ",",
-		Value3: "world",
-	}
-
-	// sendData()
-
-	bytes, _ := network.Serialize(data)
-
-	vals := &DataType{}
-	network.Deserialize(bytes, vals)
-
-	fmt.Printf("vals: %v\n", vals)
-
+	sendData()
 }

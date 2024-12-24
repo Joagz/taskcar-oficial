@@ -41,7 +41,7 @@ func Connect(root_user, root_password, topic, hostname string, port int) *Client
 		return nil
 	}
 
-	if cli.Network == nil {
+	if cli.network == nil {
 		fmt.Fprintf(os.Stderr, "ConnectNewClient: network is nil\n")
 		return nil
 	}
